@@ -1,7 +1,4 @@
-!°!!!!!
-
-
-das man alle infos bekommt und als beispiele auch datum für freie plätze eingibt etc. du bist die armada agentin <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -31,7 +28,7 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-17LFQP3GBE"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 		gtag('config', 'G-17LFQP3GBE');
 	</script>
@@ -72,7 +69,10 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 				<a href="#contact" class="cta" data-trans="cta_strategy">Strategie-Session buchen</a>
 			</div>
 			<div class="hero-visual">
-				<div class="gradient-orb"></div>
+				<video autoplay muted loop playsinline
+					style="width: 100%; max-width: 480px; border-radius: 16px; box-shadow: 0 12px 48px rgba(0,212,255,0.25), 0 0 60px rgba(212,165,116,0.15);">
+					<source src="zeynah.video.mp4" type="video/mp4">
+				</video>
 			</div>
 		</div>
 	</section>
@@ -102,7 +102,7 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 		<div class="container">
 			<h2 class="section-title" data-trans="services_title">Unsere Leistungen</h2>
 
-			<div class="grid">
+			<div class="grid-4">
 
 				<div class="card service-card" data-aos="fade-up">
 					<div class="card-icon">🤖</div>
@@ -132,15 +132,8 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 						Conversion-Optimierung.</p>
 				</div>
 
-				<div class="card service-card service-card-btn">
-					<button id="start-hotel" class="cta voice-cta" data-trans="demo_voice_btn">
-						🎙️ Persönliche Beratung
-					</button>
-				</div>
 
-				<div class="card service-card service-card-btn">
-					<button type="button" class="cta" data-trans="demo_book" id="open-demo-form">Persönliche Demo buchen</button>
-				</div>
+
 
 			</div>
 		</div>
@@ -149,8 +142,7 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 	<section class="usecases-section">
 		<div class="container">
 			<h2 class="section-title" data-trans="usecases_title">Einsatzgebiete von ZEYNAH</h2>
-
-			<div class="grid">
+			<div class="grid-4">
 
 				<div class="card usecase-card">
 					<h3 data-trans="usecase_1_title">🏢 B2B Vertrieb</h3>
@@ -182,25 +174,7 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 					</ul>
 				</div>
 
-				<div class="card usecase-card">
-					<h3 data-trans="usecase_4_title">💼 Finanzdienstleistungen</h3>
-					<ul class="usecase-list">
-						<li data-trans="usecase_4_1">Versicherungsabschlüsse automatisieren</li>
-						<li data-trans="usecase_4_2">Kreditanfragen qualifizieren</li>
-						<li data-trans="usecase_4_3">Finanzberatungstermine buchen</li>
-						<li data-trans="usecase_4_4">Compliance-konforme Prozesse</li>
-					</ul>
-				</div>
 
-				<div class="card usecase-card">
-					<h3 data-trans="usecase_5_title">🎓 Bildung & E-Learning</h3>
-					<ul class="usecase-list">
-						<li data-trans="usecase_5_1">Kursanmeldungen & Beratung</li>
-						<li data-trans="usecase_5_2">Studentische Anfragen automatisiert beantworten</li>
-						<li data-trans="usecase_5_3">Campus-Führungen vereinbaren</li>
-						<li data-trans="usecase_5_4">Zulassungsverfahren beschleunigen</li>
-					</ul>
-				</div>
 
 				<div class="card usecase-card">
 					<h3 data-trans="usecase_6_title">🍕 Gastronomie & Hotellerie</h3>
@@ -215,8 +189,7 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 			</div>
 
 			<div class="cta-section">
-				<p data-trans="usecases_cta"
-					style="text-align: center; color: var(--muted); font-size: 16px;">
+				<p data-trans="usecases_cta" style="text-align: center; color: var(--muted); font-size: 16px;">
 					Nicht sicher, ob ZEYNAH für Ihre Branche passt? <strong style="color: var(--cyan);">Kontaktieren Sie
 						uns.</strong> Wir finden die richtige Lösung für Ihr Unternehmen.
 				</p>
@@ -229,21 +202,14 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 		<div class="container">
 			<p style="text-align: center; color: var(--muted); margin-bottom: 24px; font-size: 16px;"
 				data-trans="demos_subtitle">
-				Sprechen Sie direkt mit unseren KI-Agenten. Klicken Sie auf „Demo starten“ und erlauben Sie den
-				Mikrofon-Zugriff.
+				Sehen Sie unsere KI-Agenten in Aktion.
 			</p>
 
-			<!-- Status & Global Controls -->
-			<div id="demo-controls" class="demo-controls">
-				<button id="start-demo-section" class="cta voice-cta" data-trans="demo_voice_btn">🎙️ Persönliche Beratung</button>
-				<div id="demo-status-wrap">
-					<p id="demo-status">
-						<span class="status-dot"></span> Bereit. Klicken Sie auf Persönliche Beratung.
-					</p>
-				</div>
-				<button id="stop-demo" class="cta cta-stop" style="display: none;">
-					⏹ Gespräch beenden
-				</button>
+			<div style="margin-top: 24px;">
+				<video controls playsinline preload="metadata"
+					style="width: 100%; max-width: 720px; display: block; margin: 0 auto; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,212,255,0.15);">
+					<source src="zeynah.video1.mp4" type="video/mp4">
+				</video>
 			</div>
 
 		</div>
@@ -271,8 +237,10 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 			</p>
 
 			<div class="contact-cta-block">
-				<p class="contact-cta-text" data-trans="contact_cta">Interessiert? Schreiben Sie mir – ich antworte persönlich.</p>
-				<button type="button" class="cta contact-email-cta" id="open-demo-form-contact" data-trans="contact_form_btn">
+				<p class="contact-cta-text" data-trans="contact_cta">Interessiert? Schreiben Sie mir – ich antworte
+					persönlich.</p>
+				<button type="button" class="cta contact-email-cta" id="open-demo-form-contact"
+					data-trans="contact_form_btn">
 					✉️ Nachricht schreiben
 				</button>
 			</div>
@@ -326,18 +294,23 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 	<!-- Modal: Kontaktformular für Persönliche Demo -->
 	<div id="demo-form-modal" class="modal-overlay" aria-hidden="true">
 		<div class="modal-content-form">
-			<button type="button" class="modal-close" id="close-demo-form" aria-label="Schließen" data-trans-aria="modal_close">&times;</button>
+			<button type="button" class="modal-close" id="close-demo-form" aria-label="Schließen"
+				data-trans-aria="modal_close">&times;</button>
 			<h3 class="modal-title" data-trans="form_title">Persönliche Demo anfragen</h3>
-			<p class="modal-subtitle" data-trans="form_subtitle">Füllen Sie das Formular aus – ich melde mich bei Ihnen.</p>
+			<p class="modal-subtitle" data-trans="form_subtitle">Füllen Sie das Formular aus – ich melde mich bei Ihnen.
+			</p>
 			<form id="demo-contact-form" class="contact-form" action="https://formspree.io/f/mzdaeqjg" method="POST">
 				<label for="form-name"><span data-trans="form_name">Name</span></label>
-				<input type="text" id="form-name" name="name" required placeholder="Ihr Name" data-trans-placeholder="form_placeholder_name">
+				<input type="text" id="form-name" name="name" required placeholder="Ihr Name"
+					data-trans-placeholder="form_placeholder_name">
 
 				<label for="form-email"><span data-trans="form_email">E-Mail</span></label>
-				<input type="email" id="form-email" name="email" required placeholder="ihre@email.de" data-trans-placeholder="form_placeholder_email">
+				<input type="email" id="form-email" name="email" required placeholder="ihre@email.de"
+					data-trans-placeholder="form_placeholder_email">
 
 				<label for="form-message"><span data-trans="form_message">Nachricht / Ihr Anliegen</span></label>
-				<textarea id="form-message" name="message" rows="4" placeholder="Womit kann ich Ihnen helfen?" data-trans-placeholder="form_placeholder_message"></textarea>
+				<textarea id="form-message" name="message" rows="4" placeholder="Womit kann ich Ihnen helfen?"
+					data-trans-placeholder="form_placeholder_message"></textarea>
 
 				<button type="submit" class="cta" data-trans="form_send">Nachricht senden</button>
 			</form>
@@ -347,7 +320,7 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 	<script src="i18n.js"></script>
 	<script src="script.js"></script>
 	<script>
-		(function() {
+		(function () {
 			const modal = document.getElementById('demo-form-modal');
 			const openBtn = document.getElementById('open-demo-form');
 			const closeBtn = document.getElementById('close-demo-form');
@@ -371,11 +344,11 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 			openBtn?.addEventListener('click', openModal);
 			document.getElementById('open-demo-form-contact')?.addEventListener('click', openModal);
 			closeBtn?.addEventListener('click', closeModal);
-			modal?.addEventListener('click', function(e) {
+			modal?.addEventListener('click', function (e) {
 				if (e.target === modal) closeModal();
 			});
 
-			form?.addEventListener('submit', async function(e) {
+			form?.addEventListener('submit', async function (e) {
 				e.preventDefault();
 				const submitBtn = form.querySelector('button[type="submit"]');
 				const originalText = submitBtn.textContent;
@@ -391,7 +364,7 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 
 				if (response.ok) {
 					submitBtn.textContent = '✓ Gesendet!';
-					setTimeout(function() {
+					setTimeout(function () {
 						closeModal();
 						form.reset();
 						submitBtn.disabled = false;
@@ -400,108 +373,56 @@ das man alle infos bekommt und als beispiele auch datum für freie plätze eingi
 				} else {
 					submitBtn.textContent = 'Fehler – bitte erneut versuchen';
 					submitBtn.disabled = false;
-					setTimeout(function() { submitBtn.textContent = originalText; }, 3000);
+					setTimeout(function () { submitBtn.textContent = originalText; }, 3000);
 				}
 			});
 		})();
 	</script>
 
 
-	<script type="module">
-		import Vapi from "https://esm.sh/@vapi-ai/web@2.5.2";
 
-		const PUBLIC_KEY = "946075e6-8ecc-45cb-9daf-7a22a29003e7";
-
-		const ASSISTANTS = {
-			hotel: "4c640868-b2c7-4f07-a88e-1914fe3f69e9",
-			immo: "f5399adf-30e0-4d04-992b-a8bf7b66df3c",
-		};
-
-		const btnHotel = document.getElementById("start-hotel");
-		const btnDemoSection = document.getElementById("start-demo-section");
-		const btnStop = document.getElementById("stop-demo");
-		const statusEl = document.getElementById("demo-status");
-
-		const vapi = new Vapi(PUBLIC_KEY);
-		let activeCall = null;
-		let activeDemoCard = null;
-
-		const voiceWaveHTML = '<span class="voice-wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>';
-
-		function setStatus(text, type = "default") {
-			if (!statusEl) return;
-			statusEl.className = type;
-			statusEl.innerHTML = type === "live"
-				? voiceWaveHTML + " <span>🔴 Live – Sprechen Sie jetzt!</span>"
-				: `<span class="status-dot"></span> ${text}`;
-		}
-
-		function setButtonsEnabled(enabled) {
-			if (btnHotel) btnHotel.disabled = !enabled;
-			if (btnDemoSection) btnDemoSection.disabled = !enabled;
-		}
-
-		async function startDemo(type) {
-			if (activeCall) return;
-
-			setStatus("Verbindung wird aufgebaut...");
-			setButtonsEnabled(false);
-			if (btnStop) btnStop.style.display = "inline-block";
-
-			activeDemoCard = document.querySelector(`[id="start-${type}"]`)?.closest(".demo-card");
-			if (activeDemoCard) activeDemoCard.classList.add("demo-live");
-
-			try {
-				activeCall = await vapi.start(ASSISTANTS[type]);
-			} catch (e) {
-				console.error(e);
-				setStatus("Fehler: " + (e.message || "Bitte erneut versuchen."), "error");
-				if (btnStop) btnStop.style.display = "none";
-				activeCall = null;
-				setButtonsEnabled(true);
-				if (activeDemoCard) activeDemoCard.classList.remove("demo-live");
-				activeDemoCard = null;
-			}
-		}
-
-		function stopDemo() {
-			if (vapi) vapi.stop();
-		}
-
-		vapi.on("call-start", () => {
-			setStatus("", "live");
-			if (btnStop) btnStop.style.display = "inline-block";
-		});
-
-		vapi.on("call-end", () => {
-			activeCall = null;
-			setButtonsEnabled(true);
-			if (activeDemoCard) activeDemoCard.classList.remove("demo-live");
-			activeDemoCard = null;
-			setStatus("✓ Gespräch beendet.");
-			if (btnStop) btnStop.style.display = "none";
-			setTimeout(() => setStatus("Bereit. Klicken Sie auf Persönliche Beratung."), 3000);
-		});
-
-		vapi.on("error", (e) => {
-			console.error(e);
-			activeCall = null;
-			setButtonsEnabled(true);
-			if (activeDemoCard) activeDemoCard.classList.remove("demo-live");
-			activeDemoCard = null;
-			setStatus("Ein Fehler ist aufgetreten.", "error");
-			if (btnStop) btnStop.style.display = "none";
-			setTimeout(() => setStatus("Bereit. Klicken Sie auf Persönliche Beratung."), 4000);
-		});
-
-		// Button Listeners
-		if (btnHotel) btnHotel.onclick = () => startDemo("hotel");
-		if (btnDemoSection) btnDemoSection.onclick = () => startDemo("hotel");
-		if (btnStop) btnStop.onclick = () => stopDemo();
-	</script>
-
-	<elevenlabs-convai agent-id="agent_3201khxdc18wfrabzjjpqtes42jz"></elevenlabs-convai>
+	<elevenlabs-convai agent-id="agent_3201khxdc18wfrabzjjpqtes42jz" override-language="de" action-text="Frag Zeynah"
+		start-call-text="Gespräch starten" end-call-text="Gespräch beenden" expand-text="Chat öffnen"
+		listening-text="Hört zu..." speaking-text="Zeynah spricht"></elevenlabs-convai>
 	<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+	<script>
+		// Override ElevenLabs widget "Need help?" text permanently
+		(function () {
+			const labelMap = {
+				de: 'Frag Zeynah',
+				tr: "Zeynah'a sor",
+				en: 'Ask Zeynah'
+			};
+			function getLang() {
+				return document.documentElement.lang || 'de';
+			}
+			function overrideText() {
+				const widget = document.querySelector('elevenlabs-convai');
+				if (!widget) return;
+				const root = widget.shadowRoot;
+				if (!root) return;
+				root.querySelectorAll('*').forEach(function (el) {
+					if (el.children.length === 0 && el.textContent.trim() === 'Need help?') {
+						el.textContent = labelMap[getLang()] || labelMap['de'];
+					}
+				});
+			}
+			// Permanent interval - never stops
+			setInterval(overrideText, 300);
+			// Watch for shadow root and observe inside it
+			var shadowObsAttached = false;
+			var bodyObs = new MutationObserver(function () {
+				var widget = document.querySelector('elevenlabs-convai');
+				if (widget && widget.shadowRoot && !shadowObsAttached) {
+					shadowObsAttached = true;
+					var shadowObs = new MutationObserver(overrideText);
+					shadowObs.observe(widget.shadowRoot, { childList: true, subtree: true, characterData: true });
+					overrideText();
+				}
+			});
+			bodyObs.observe(document.body, { childList: true, subtree: true });
+		})();
+	</script>
 </body>
 
 </html>

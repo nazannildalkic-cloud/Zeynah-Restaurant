@@ -188,7 +188,7 @@ const translations = {
     benefits_title: "Neden ZEYNAH?",
     benefit_1: "Personel maliyeti olmayan 24/7 Erişilebilirlik",
     benefit_2: "Müşteri Adayı Başına Düşük Maliyetler",
-    benefit_3: "Scalable İnfrastructure",
+    benefit_3: "Ölçeklenebilir Altyapı",
     benefit_4: "GDPR Uyumu Sistemler",
     benefit_5: "Net Gelir Odaklanması",
     contact_title: "Şimdi Başlayın",
@@ -375,6 +375,56 @@ const LanguageManager = {
 
     // Update HTML lang attribute
     document.documentElement.lang = lang;
+
+    // Update ElevenLabs ConvAI widget language (only on user-triggered change)
+    if (this._initialized) {
+      const widgetTexts = {
+        de: {
+          'override-language': 'de',
+          'action-text': 'Frag Zeynah',
+          'start-call-text': 'Gespräch starten',
+          'end-call-text': 'Gespräch beenden',
+          'expand-text': 'Chat öffnen',
+          'listening-text': 'Hört zu...',
+          'speaking-text': 'Zeynah spricht'
+        },
+        tr: {
+          'override-language': 'tr',
+          'action-text': "Zeynah'a sor",
+          'start-call-text': 'Görüşme başlat',
+          'end-call-text': 'Görüşmeyi bitir',
+          'expand-text': 'Sohbeti aç',
+          'listening-text': 'Dinliyor...',
+          'speaking-text': 'Zeynah konuşuyor'
+        },
+        en: {
+          'override-language': 'en',
+          'action-text': 'Ask Zeynah',
+          'start-call-text': 'Start conversation',
+          'end-call-text': 'End conversation',
+          'expand-text': 'Open chat',
+          'listening-text': 'Listening...',
+          'speaking-text': 'Zeynah speaking'
+        }
+      };
+      setTimeout(() => {
+        const oldWidget = document.querySelector('elevenlabs-convai');
+        if (oldWidget) oldWidget.remove();
+        const newWidget = document.createElement('elevenlabs-convai');
+        newWidget.setAttribute('agent-id', 'agent_3201khxdc18wfrabzjjpqtes42jz');
+        const texts = widgetTexts[lang] || widgetTexts['de'];
+        Object.entries(texts).forEach(([attr, value]) => {
+          newWidget.setAttribute(attr, value);
+        });
+        const scriptTag = document.body.querySelector('script[src*="elevenlabs"]');
+        if (scriptTag) {
+          document.body.insertBefore(newWidget, scriptTag);
+        } else {
+          document.body.appendChild(newWidget);
+        }
+      }, 100);
+    }
+    this._initialized = true;
   },
 
   setupListeners() {

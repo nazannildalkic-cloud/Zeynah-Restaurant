@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /temp
+
+Sitemap: https://zeynah.cloud/sitemap.xml
+
+# Crawl-delay: 1
+# Request-rate: 1 request per 1 second

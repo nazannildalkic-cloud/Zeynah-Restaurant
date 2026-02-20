@@ -1,0 +1,31 @@
+{
+  "name": "zeynah-website",
+  "version": "1.0.0",
+  "description": "ZEYNAH - Voice AI Systems Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "dev": "python -m http.server 8000",
+    "test": "echo 'No tests configured'",
+    "lighthouse": "lighthouse https://zeynah.cloud --view"
+  },
+  "keywords": [
+    "voice-ai",
+    "revenue-automation",
+    "lead-generation",
+    "conversational-ai",
+    "sales-automation"
+  ],
+  "author": "ZEYNAH Team",
+  "license": "Proprietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeynah/website"
+  },
+  "devDependencies": {
+    "lighthouse": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

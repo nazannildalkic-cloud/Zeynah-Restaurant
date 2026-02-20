@@ -1,0 +1,52 @@
+{
+  "name": "ZEYNAH | Voice AI Systems",
+  "short_name": "ZEYNAH",
+  "description": "Intelligente Voice AI Systeme für automatisierte Kundenkommunikation und Revenue Automation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0e1a",
+  "theme_color": "#00d4ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "zeynahlogo.jpg.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "zeynahlogo.jpg.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-540x720.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-1280x720.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Kontakt",
+      "short_name": "Kontakt",
+      "description": "Buchen Sie eine Strategie-Session",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "/icon-contact.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

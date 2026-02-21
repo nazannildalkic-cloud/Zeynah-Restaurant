@@ -1,0 +1,354 @@
+/* ========== COMPACT FOOTER ========== */
+.compact-footer {
+  background: linear-gradient(180deg, rgba(35, 50, 80, 0.4) 0%, rgba(15, 23, 42, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 212, 255, 0.1);
+  padding: 40px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.footer-brand p {
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.footer-nav-col h5,
+.footer-founder h5 {
+  color: var(--cyan);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-nav-col ul {
+  list-style: none;
+}
+
+.footer-nav-col li {
+  margin-bottom: 8px;
+}
+
+.footer-nav-col a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.footer-nav-col a:hover {
+  color: var(--cyan);
+}
+
+.footer-founder .founder-role {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px !important;
+  opacity: 0.9;
+}
+
+.footer-contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-contact-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.footer-contact-links a:hover {
+  color: var(--cyan);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* ========== MODAL KONTAKTFORMULAR ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content-form {
+  background: linear-gradient(145deg, var(--card) 0%, var(--mid) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.modal-close:hover {
+  color: var(--cyan);
+}
+
+.modal-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.modal-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.contact-form label {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form .cta {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ========== LEGAL PAGES ========== */
+.legal-page {
+  padding: 120px 0 80px;
+  min-height: 80vh;
+}
+
+.legal-page h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.legal-updated {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.legal-content {
+  max-width: 720px;
+  line-height: 1.8;
+}
+
+.legal-content h2 {
+  font-size: 20px;
+  color: var(--cyan);
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.legal-content p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.legal-content a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+.legal-content a:hover {
+  text-decoration: underline;
+}
+
+.legal-back {
+  margin-top: 48px;
+}
+
+.legal-back a {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.legal-back a:hover {
+  text-decoration: underline;
+}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .benefits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  nav {
+    display: none;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    background: rgba(10, 14, 26, 0.98);
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .grid, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 32px;
+  }
+  
+  .footer-contact-links {
+    align-items: center;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ========== ACCESSIBILITY ========== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========== PRINT ========== */
+@media print {
+  header, footer {
+    display: none;
+  }
+  section {
+    page-break-inside: avoid;
+  }
+}

@@ -541,9 +541,6 @@
                     if (el.children.length === 0 && el.textContent.trim() === 'Need help?') {
                         el.textContent = labelMap[getLang()] || labelMap['de'];
                     }
-                    if (el.textContent && el.textContent.match(/conv_[a-z0-9]+/)) {
-                        el.style.display = 'none';
-                    }
                 });
             }
             // Permanent interval - never stops
@@ -587,17 +584,27 @@
             }
         });
 
-        // Fail-safe for secondary video (zeynah.video1.mp4)
+        // Second video: force autoplay (zeynah.video1.mp4) – no user click needed
         const v2 = document.getElementById('contact-video');
         if (v2) {
-            v2.addEventListener('error', function () {
-                console.error("Video 2 failed to load, retrying...");
-                v2.load();
+            v2.muted = true;
+            v2.setAttribute('playsinline', '');
+            v2.setAttribute('autoplay', '');
+            v2.play().catch(function() {});
+            v2.addEventListener('error', function () { v2.load(); v2.play().catch(function() {}); });
+            document.addEventListener('visibilitychange', function () {
+                if (document.visibilityState === 'visible' && v2.paused) v2.play().catch(function() {});
             });
-            // Nudge play every 2 seconds if paused and visible
-            setInterval(() => {
-                if (v2.paused) v2.play().catch(() => { });
-            }, 2000);
+            setInterval(function () {
+                if (v2.paused) v2.play().catch(function() {});
+            }, 1200);
+            if (typeof IntersectionObserver !== 'undefined') {
+                new IntersectionObserver(function (entries) {
+                    entries.forEach(function (e) {
+                        if (e.isIntersecting && v2.paused) v2.play().catch(function() {});
+                    });
+                }, { threshold: 0.2 }).observe(v2);
+            }
         }
     </script>
     <!-- Floating WhatsApp Button -->

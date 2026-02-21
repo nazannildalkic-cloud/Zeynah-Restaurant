@@ -286,29 +286,59 @@
     </section>
 
     <footer class="compact-footer"
-        style="padding: 16px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 32px;">
+        style="padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 40px;">
         <div class="container">
             <div class="footer-row"
-                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; row-gap: 12px;">
-                <div class="footer-col" style="display: flex; align-items: center; gap: 12px;">
-                    <img src="zeynahlogo.jpg.jpeg" alt="ZEYNAH" style="height: 22px;">
-                    <p data-trans="footer_desc" style="font-size: 10px; opacity: 0.7; margin: 0;">Voice AI Systeme für
+                style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 20px;">
+                <!-- Brand -->
+                <div class="footer-col" style="flex: 1; min-width: 150px;">
+                    <img src="zeynahlogo.jpg.jpeg" alt="ZEYNAH" style="height: 25px; margin-bottom: 5px;">
+                    <p data-trans="footer_desc" style="font-size: 11px; opacity: 0.7; margin: 0;">Voice AI Systeme für
                         Umsatz-Automatisierung</p>
                 </div>
-                <div class="footer-col" style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-                    <a href="#about" data-trans="about" style="color: var(--muted); text-decoration: none; font-size: 11px;">Über uns</a>
-                    <a href="#services" data-trans="services" style="color: var(--muted); text-decoration: none; font-size: 11px;">Services</a>
-                    <a href="#contact" data-trans="contact" style="color: var(--muted); text-decoration: none; font-size: 11px;">Kontakt</a>
-                    <a href="impressum.html" data-trans="imprint" style="color: var(--muted); text-decoration: none; font-size: 11px;">Impressum</a>
-                    <a href="datenschutz.html" data-trans="privacy" style="color: var(--muted); text-decoration: none; font-size: 11px;">Datenschutz</a>
-                    <a href="agb.html" data-trans="terms" style="color: var(--muted); text-decoration: none; font-size: 11px;">AGB</a>
-                    <span style="color: var(--muted); font-size: 11px;">|</span>
-                    <span style="font-size: 11px; color: var(--white); font-weight: 600;"><span data-trans="ceo_title">Nazan Nil Dalkic | Founder</span></span>
-                    <span style="color: var(--muted); font-size: 11px;">📱 +49 177 6480485</span>
-                    <span style="color: var(--muted); font-size: 11px;">🌐 zeynah.cloud</span>
+
+                <!-- Navigation -->
+                <div class="footer-col" style="flex: 1; min-width: 120px;">
+                    <h5 data-trans="nav_title" style="font-size: 13px; margin: 0 0 10px 0; color: var(--cyan);">
+                        Navigation</h5>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0; font-size: 12px; display: flex; flex-direction: column; gap: 5px;">
+                        <li><a href="#about" data-trans="about" style="color: var(--muted); text-decoration: none;">Über
+                                uns</a></li>
+                        <li><a href="#services" data-trans="services"
+                                style="color: var(--muted); text-decoration: none;">Services</a></li>
+                        <li><a href="#contact" data-trans="contact"
+                                style="color: var(--muted); text-decoration: none;">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="footer-col" style="flex: 1; min-width: 120px;">
+                    <h5 data-trans="legal_title" style="font-size: 13px; margin: 0 0 10px 0; color: var(--cyan);">
+                        Rechtliches</h5>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0; font-size: 12px; display: flex; flex-direction: column; gap: 5px;">
+                        <li><a href="impressum.html" data-trans="imprint"
+                                style="color: var(--muted); text-decoration: none;">Impressum</a></li>
+                        <li><a href="datenschutz.html" data-trans="privacy"
+                                style="color: var(--muted); text-decoration: none;">Datenschutz</a></li>
+                        <li><a href="agb.html" data-trans="terms"
+                                style="color: var(--muted); text-decoration: none;">AGB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Founder -->
+                <div class="footer-col" style="flex: 1.5; min-width: 200px; text-align: right;">
+                    <p style="margin: 0; font-weight: 700; font-size: 13px; color: var(--white);">
+                        <span data-trans="ceo_title">Nazan Nil Dalkic | Founder</span>
+                    </p>
+                    <p style="margin: 5px 0 0 0; font-size: 12px; color: var(--muted);">📱 +49 177 6480485</p>
+                    <p style="margin: 2px 0 0 0; font-size: 12px; color: var(--muted);">🌐 zeynah.cloud</p>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.05); margin-top: 12px; padding-top: 8px; text-align: center;">
+
+            <div
+                style="border-top: 1px solid rgba(255,255,255,0.05); margin-top: 20px; padding-top: 10px; text-align: center;">
                 <p style="font-size: 10px; opacity: 0.5; margin: 0;">&copy; 2025-2026 ZEYNAH | Voice AI Systems. <span
                         data-trans="all_rights">Alle Rechte vorbehalten.</span></p>
             </div>
@@ -510,6 +540,9 @@
                 root.querySelectorAll('*').forEach(function (el) {
                     if (el.children.length === 0 && el.textContent.trim() === 'Need help?') {
                         el.textContent = labelMap[getLang()] || labelMap['de'];
+                    }
+                    if (el.textContent && el.textContent.match(/conv_[a-z0-9]+/)) {
+                        el.style.display = 'none';
                     }
                 });
             }

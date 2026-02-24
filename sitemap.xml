@@ -1,45 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://zeynah.cloud</loc>
+    <loc>https://zeynah.com</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://zeynah.cloud#about</loc>
+    <loc>https://zeynah.com#about</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zeynah.cloud#services</loc>
+    <loc>https://zeynah.com#services</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zeynah.cloud#contact</loc>
+    <loc>https://zeynah.com#contact</loc>
     <lastmod>2026-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://zeynah.cloud/impressum.html</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://zeynah.cloud/datenschutz.html</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://zeynah.cloud/agb.html</loc>
-    <lastmod>2026-02-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>

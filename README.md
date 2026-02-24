@@ -184,7 +184,7 @@ Edit in `index.html`:
 
 ### Kontakt-Infos aktualisieren
 ```html
-<a href="mailto:nazandalkic@gmail.com">📧 nazandalkic@gmail.com</a>
+<a href="mailto:nazan@zeynah.com">📧 nazan@zeynah.com</a>
 <a href="tel:+49177648048">📱 +49 177 6480485</a>
 ```
 
@@ -216,7 +216,7 @@ Für Google Analytics, Hotjar, oder ähnliche Tools:
 ## 📞 Support
 
 Für Fragen zur Website:
-- Email: nazandalkic@gmail.com
+- Email: nazan@zeynah.com
 - Phone: +49 177 6480485
 
 ## 📄 Lizenz

@@ -153,7 +153,7 @@ docker run -p 80:80 zeynah-website
 # For Apache
 # Use AutoSSL in cPanel, or:
 sudo apt-get install certbot python3-certbot-apache
-sudo certbot --apache -d zeynah.cloud
+sudo certbot --apache -d zeynah.com
 ```
 
 **Option B: Automatic (Recommended)**
@@ -205,12 +205,12 @@ sudo certbot --apache -d zeynah.cloud
 ### 4. Monitoring & Uptime
 
 **Uptime Robot (Free):**
-- Monitor: zeynah.cloud
+- Monitor: zeynah.com
 - Alert on downtime
 - Get email notifications
 
 **StatusPage (Optional):**
-- Status page: status.zeynah.cloud
+- Status page: status.zeynah.com
 - Incident reporting
 - Maintenance alerts
 

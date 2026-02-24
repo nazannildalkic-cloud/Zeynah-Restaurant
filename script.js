@@ -6,18 +6,6 @@ menuToggle?.addEventListener('click', () => {
   nav.classList.toggle('active');
 });
 
-// ========== PARALLAX HERO ==========
-const heroVisual = document.querySelector('.hero-visual');
-window.addEventListener('scroll', () => {
-  if (heroVisual && window.innerWidth > 768) {
-    const scrollY = window.scrollY;
-    const heroHeight = document.querySelector('.hero')?.offsetHeight || 600;
-    if (scrollY < heroHeight) {
-      heroVisual.style.transform = `translateY(${scrollY * 0.12}px)`;
-    }
-  }
-}, { passive: true });
-
 // Close menu when link is clicked
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', () => {
@@ -41,42 +29,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ========== SCROLL ANIMATIONS ==========
 const observerOptions = {
-  threshold: 0.08,
-  rootMargin: '0px 0px -80px 0px'
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const delay = Math.min(i * 0.05, 0.4);
-      entry.target.style.animation = `fadeInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) ${delay}s forwards`;
+      entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
       observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
+// Observe all cards
 document.querySelectorAll('.card').forEach(card => {
   card.style.opacity = '0';
   observer.observe(card);
 });
 
-// Section titles
-document.querySelectorAll('.section-title').forEach(el => {
-  el.style.opacity = '0';
-  const titleObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-        titleObserver.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-  titleObserver.observe(el);
-});
-
 // ========== HEADER ANIMATION ON SCROLL ==========
 let lastScrollTop = 0;
-const header = document.querySelector('header');
+const header = document.querySelector('.main-header');
 
 window.addEventListener('scroll', () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -101,7 +75,7 @@ benefitsList.forEach((item, index) => {
 // ========== CONTACT FORM HANDLING ==========
 function setupContactForm() {
   const contactLinks = document.querySelectorAll('.contact-link');
-  
+
   contactLinks.forEach(link => {
     if (link.href.startsWith('mailto:')) {
       link.addEventListener('click', (e) => {
@@ -136,26 +110,18 @@ if ('IntersectionObserver' in window) {
 // ========== INITIALIZATION ==========
 document.addEventListener('DOMContentLoaded', () => {
   setupContactForm();
-  
-  // Hero text staggered reveal
+
+  // Add fade-in animation to hero content
   const heroText = document.querySelector('.hero-text');
   if (heroText) {
-    heroText.style.animation = 'fadeInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
-    const h1 = heroText.querySelector('h1');
-    if (h1) h1.style.animation = 'fadeInUp 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s backwards';
+    heroText.style.animation = 'fadeInUp 0.8s ease-out forwards';
   }
 
-  // Service cards - bounce-in on load
+  // Animate service cards on load
   const serviceCards = document.querySelectorAll('.service-card');
   serviceCards.forEach((card, index) => {
     card.style.opacity = '0';
-    card.style.animation = `fadeInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) ${index * 0.1 + 0.3}s forwards`;
-  });
-
-  // Demo links - add hover ripple effect
-  document.querySelectorAll('.demo-link').forEach(btn => {
-    btn.addEventListener('mouseenter', () => btn.style.transform = 'scale(1.05)');
-    btn.addEventListener('mouseleave', () => btn.style.transform = 'scale(1)');
+    card.style.animation = `fadeInUp 0.6s ease-out ${index * 0.1 + 0.2}s forwards`;
   });
 });
 

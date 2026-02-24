@@ -106,6 +106,13 @@ const translations = {
     privacy: "Datenschutz",
     terms: "AGB",
     all_rights: "Alle Rechte vorbehalten.",
+    live_app_test: "Live App testen →",
+    listen_demo: "Demo anhören",
+    download: "Download",
+    voice_greet_b2b: "Ich bin ZEYNAH, Ihr KI-Assistent. Wie kann ich Ihnen heute bei der B2B Lead-Qualifizierung helfen?",
+    voice_greet_healthcare: "Ich bin ZEYNAH, Ihr digitaler Praxis-Assistent. Wie kann ich Ihnen heute bei Ihrer Terminbuchung helfen?",
+    voice_greet_realestate: "Guten Tag, ich bin ZEYNAH. Wie kann ich Ihnen heute bei der Suche nach Ihrer Traum-Immobilie helfen?",
+    voice_greet_restaurant: "Willkommen! Ich bin ZEYNAH. Wie kann ich Ihnen heute bei Ihrer Tisch-Reservierung helfen?"
   },
   tr: {
     about: "Hakkımızda",
@@ -211,6 +218,13 @@ const translations = {
     privacy: "Gizlilik",
     terms: "Şartlar ve Koşullar",
     all_rights: "Tüm haklarıyla saklıdır.",
+    live_app_test: "Canlı Uygulamayı Test Et →",
+    listen_demo: "Demoyu Dinle",
+    download: "İndir",
+    voice_greet_b2b: "Ben ZEYNAH, yapay zeka asistanınız. B2B müşteri niteleme konusunda size bugün nasıl yardımcı olabilirim?",
+    voice_greet_healthcare: "Ben ZEYNAH, dijital sağlık asistanınız. Randevu alma konusunda size bugün nasıl yardımcı olabilirim?",
+    voice_greet_realestate: "Merhaba, ben ZEYNAH. Hayalinizdeki gayrimenkulü bulma konusunda size bugün nasıl yardımcı olabilirim?",
+    voice_greet_restaurant: "Hoş geldiniz! Ben ZEYNAH. Masa rezervasyonunuz konusunda size bugün nasıl yardımcı olabilirim?"
   },
   en: {
     about: "About Us",
@@ -316,6 +330,13 @@ const translations = {
     privacy: "Privacy",
     terms: "Terms",
     all_rights: "All rights reserved.",
+    live_app_test: "Test Live App →",
+    listen_demo: "Listen to Demo",
+    download: "Download",
+    voice_greet_b2b: "I am ZEYNAH, your AI assistant. How can I help you with B2B lead qualification today?",
+    voice_greet_healthcare: "I am ZEYNAH, your digital assistant. How can I help you with your appointment booking today?",
+    voice_greet_realestate: "Hello, I am ZEYNAH. How can I help you find your dream real estate today?",
+    voice_greet_restaurant: "Welcome! I am ZEYNAH. How can I help you with your table reservation today?"
   }
 };
 

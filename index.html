@@ -24,6 +24,7 @@
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-weight='800' letter-spacing='2'>Z</text></svg>">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-17LFQP3GBE"></script>
     <script>
@@ -36,13 +37,13 @@
 
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="container header-content">
             <a href="index.html" class="logo"><img src="zeynahlogo.jpg.jpeg" alt="ZEYNAH"></a>
             <nav>
                 <a href="#about" data-trans="about">Über uns</a>
                 <a href="#services" data-trans="services">Services</a>
-                <a href="#demos" data-trans="demos_nav">Demo</a>
+                <a href="demos.html" data-trans="demos_nav">Demo</a>
                 <a href="#contact" data-trans="contact">Kontakt</a>
             </nav>
             <div class="language-switcher">
@@ -159,6 +160,14 @@
                         <li data-trans="usecase_1_3">Vertriebspipeline-Automatisierung</li>
                         <li data-trans="usecase_1_4">Integration mit Salesforce & HubSpot</li>
                     </ul>
+                    <div class="audio-demo-box"
+                        style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,212,255,0.1);">
+                        <p style="font-size: 12px; margin-bottom: 8px; color: var(--cyan); font-weight: 600;"
+                            data-trans="listen_demo">Demo anhören</p>
+                        <button class="cta" style="padding: 10px 20px; font-size: 14px;"
+                            onclick="speakDemo('voice_greet_b2b')">🔊
+                            Abspielen</button>
+                    </div>
                 </div>
 
                 <div class="card usecase-card">
@@ -169,6 +178,14 @@
                         <li data-trans="usecase_2_3">Verwaltung von Versicherungsanfragen</li>
                         <li data-trans="usecase_2_4">DSGVO-konforme Datenverarbeitung</li>
                     </ul>
+                    <div class="audio-demo-box"
+                        style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,212,255,0.1);">
+                        <p style="font-size: 12px; margin-bottom: 8px; color: var(--cyan); font-weight: 600;"
+                            data-trans="listen_demo">Demo anhören</p>
+                        <button class="cta" style="padding: 10px 20px; font-size: 14px;"
+                            onclick="speakDemo('voice_greet_healthcare')">🔊
+                            Abspielen</button>
+                    </div>
                 </div>
 
                 <div class="card usecase-card">
@@ -179,6 +196,14 @@
                         <li data-trans="usecase_3_3">Objektinformation & Preisberatung</li>
                         <li data-trans="usecase_3_4">Lead-Scoring für Makler</li>
                     </ul>
+                    <div class="audio-demo-box"
+                        style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,212,255,0.1);">
+                        <p style="font-size: 12px; margin-bottom: 8px; color: var(--cyan); font-weight: 600;"
+                            data-trans="listen_demo">Demo anhören</p>
+                        <button class="cta" style="padding: 10px 20px; font-size: 14px;"
+                            onclick="speakDemo('voice_greet_realestate')">🔊
+                            Abspielen</button>
+                    </div>
                 </div>
 
                 <div class="card usecase-card">
@@ -189,6 +214,16 @@
                         <li data-trans="usecase_6_3">Kundenabfragen in Echtzeit</li>
                         <li data-trans="usecase_6_4">Bewertungsmanagement & Follow-ups</li>
                     </ul>
+                    <div class="audio-demo-box"
+                        style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,212,255,0.1); margin-bottom: 15px;">
+                        <p style="font-size: 12px; margin-bottom: 8px; color: var(--cyan); font-weight: 600;"
+                            data-trans="listen_demo">Demo anhören</p>
+                        <button class="cta" style="padding: 10px 20px; font-size: 14px;"
+                            onclick="speakDemo('voice_greet_restaurant')">🔊
+                            Abspielen</button>
+                    </div>
+                    <a href="https://zeynah-app.netlify.app" target="_blank" class="demo-link" style="margin-top: 0;"
+                        data-trans="live_app_test">Live App testen →</a>
                 </div>
 
             </div>
@@ -599,9 +634,54 @@
     </script>
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/491776480485" target="_blank" id="whatsapp-float"
-        style="position: fixed; bottom: 30px; right: 30px; background: #25D366; color: #FFF; width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 2000; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; text-decoration: none;">
-        <i class="fab fa-whatsapp"></i>
+        style="position: fixed; bottom: 30px; left: 30px; background: #25D366; color: #FFF; width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 35px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 2000; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; text-decoration: none;">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
+    <script>
+        // Optimized Voice Synthesis Engine for PC/Mobile
+        let speechVoices = [];
+        function loadVoices() {
+            speechVoices = window.speechSynthesis.getVoices();
+        }
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+        loadVoices();
+
+        function speakDemo(key) {
+            if (!window.speechSynthesis) return alert('Browser supportet Sprache nicht.');
+
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+
+            const lang = document.documentElement.lang || 'de';
+            const text = translations[lang] ? translations[lang][key] : (translations['de'] ? translations['de'][key] : '');
+
+            const utter = new SpeechSynthesisUtterance(text);
+
+            // Device-optimized settings
+            utter.volume = 1.0;
+            utter.rate = 1.0;
+            utter.pitch = 1.0;
+
+            // Mapping for high-quality offline voices
+            const langCode = lang === 'tr' ? 'tr-TR' : (lang === 'en' ? 'en-US' : 'de-DE');
+            utter.lang = langCode;
+
+            // Voice selection logic (prefers local/offline voices)
+            if (speechVoices.length === 0) loadVoices();
+
+            // Best match strategy: 1. Local language match, 2. Global language match, 3. Default
+            const voice = speechVoices.find(v => v.lang === langCode && v.localService) ||
+                speechVoices.find(v => v.lang.startsWith(lang)) ||
+                speechVoices[0];
+
+            if (voice) utter.voice = voice;
+
+            // Stability fix for mobile Safari/Chrome
+            window.speechSynthesis.speak(utter);
+        }
+    </script>
     <script>
         // Hover effect for WhatsApp button
         const waBtn = document.getElementById('whatsapp-float');

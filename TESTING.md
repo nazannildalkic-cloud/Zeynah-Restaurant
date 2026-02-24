@@ -101,7 +101,7 @@ Total Blocking Time (TBT):        < 300ms
 ```bash
 # Using Lighthouse CLI
 npm install -g lighthouse
-lighthouse https://zeynah.cloud --view
+lighthouse https://zeynah.com --view
 
 # Using WebPageTest
 # https://www.webpagetest.org

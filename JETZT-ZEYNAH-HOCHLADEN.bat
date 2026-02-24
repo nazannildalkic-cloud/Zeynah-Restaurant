@@ -21,14 +21,18 @@ git branch -M main
 echo.
 echo 6. Mit GitHub verbinden...
 git remote remove origin >nul 2>&1
-git remote add origin https://github.com/nazannildalkic-cloud/Zeynah-Restaurant.git
+git remote add origin https://github.com/nazannildalkic-cloud/Zeynah.git
 echo.
-echo 7. Zu GitHub pushen...
-echo (Dies kann einen Moment dauern...)
+echo 7. Zu GitHub pushen (Main Site)...
+echo (Dies aktualisiert zeynah.cloud...)
 git push -u origin main
 echo.
+echo 8. Backup zu Restaurant-Repo...
+git remote set-url origin https://github.com/nazannildalkic-cloud/Zeynah-Restaurant.git
+git push -f origin main
+echo.
 echo ============================================
-echo FERTIG! Deine Zeynah-App sollte nun online sein.
+echo FERTIG! zeynah.cloud sollte nun aktualisiert sein.
 echo Du kannst dieses Fenster jetzt schliessen.
 echo ============================================
 pause

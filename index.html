@@ -248,6 +248,29 @@
         </div>
     </section>
 
+    <!-- Live Voice Demo Section (App Restaurant) -->
+    <section id="demos" class="demos-section">
+        <div class="container">
+            <h2 class="section-title" data-trans="demos_title">Live Voice Demo</h2>
+            <p style="text-align: center; color: var(--muted); margin-top: -10px;" data-trans="demos_subtitle">Sehen Sie ZEYNAH in Aktion. Verstehen Sie, wie unsere KI tatsächlich funktioniert.</p>
+
+            <div class="demo-controls">
+                <div class="voice-demo-buttons">
+                    <button id="start-hotel" class="cta voice-cta">🏨 Hotel &amp; Gastronomie</button>
+                    <button id="start-immo" class="cta voice-cta">🏠 Immobilien</button>
+                </div>
+                <button id="stop-demo" class="cta cta-stop" style="display:none;">⏹ Gespräch beenden</button>
+                <div id="demo-status-wrap">
+                    <p id="demo-status">Bereit zum Starten.</p>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: var(--muted); font-size: 14px; margin-top: 16px;">
+                💡 Der Browser fragt nach Mikrofon-Zugriff. Bitte erlauben Sie dies für die Demo.
+            </p>
+        </div>
+    </section>
+
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="grid contact-grid">
@@ -609,6 +632,100 @@
             waBtn.addEventListener('mouseenter', () => waBtn.style.transform = 'scale(1.1)');
             waBtn.addEventListener('mouseleave', () => waBtn.style.transform = 'scale(1)');
         }
+    </script>
+    <!-- Vapi Voice Demo Engine -->
+    <script type="module">
+        import Vapi from "https://esm.sh/@vapi-ai/web@2.5.2";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const PUBLIC_KEY = "946075e6-8ecc-45cb-9daf-7a22a29003e7";
+            const ASSISTANTS = {
+                hotel: "97c3950b-de86-4997-be45-b49218580ee0",
+                immo: "fe9075b3-4e9b-4fc1-b4a7-24fb3ac73a54"
+            };
+
+            const vapi = new Vapi(PUBLIC_KEY);
+            const btnHotel = document.getElementById("start-hotel");
+            const btnImmo = document.getElementById("start-immo");
+            const btnStop = document.getElementById("stop-demo");
+            const statusEl = document.getElementById("demo-status");
+            let activeCall = false;
+
+            function setStatus(text, type = "default") {
+                const typeClassMap = { error: "error", success: "success", connected: "live" };
+                statusEl.className = typeClassMap[type] || "";
+                if (type === "connected") {
+                    statusEl.innerHTML = '<span class="status-dot"></span><span class="voice-wave"><span></span><span></span><span></span><span></span><span></span></span> ' + text;
+                } else {
+                    statusEl.textContent = text;
+                }
+            }
+
+            function toggleButtons(calling) {
+                btnHotel.disabled = calling;
+                btnImmo.disabled = calling;
+                btnStop.style.display = calling ? "inline-block" : "none";
+            }
+
+            async function startDemo(type) {
+                if (activeCall) return;
+                activeCall = true;
+                toggleButtons(true);
+                setStatus("Verbindung wird aufgebaut...");
+                try {
+                    await vapi.start(ASSISTANTS[type]);
+                } catch (err) {
+                    console.error("Vapi Start Error:", err);
+                    activeCall = false;
+                    toggleButtons(false);
+                    if (err.message && err.message.includes("Permission")) {
+                        setStatus("❌ Mikrofon-Zugriff verweigert. Bitte erlauben Sie den Zugriff.", "error");
+                    } else {
+                        setStatus("❌ Verbindung fehlgeschlagen. Bitte versuchen Sie es erneut.", "error");
+                    }
+                }
+            }
+
+            function stopDemo() {
+                if (!activeCall) return;
+                try {
+                    vapi.stop();
+                    setStatus("Verbindung wird beendet...");
+                } catch (err) {
+                    console.error("Vapi Stop Error:", err);
+                    activeCall = false;
+                    toggleButtons(false);
+                    setStatus("Gespräch beendet.", "success");
+                }
+            }
+
+            vapi.on("call-start", () => {
+                setStatus("🔴 Live - Sprechen Sie jetzt!", "connected");
+            });
+
+            vapi.on("call-end", () => {
+                activeCall = false;
+                toggleButtons(false);
+                setStatus("✓ Gespräch beendet.", "success");
+                setTimeout(() => { setStatus("Bereit zum Starten."); }, 3000);
+            });
+
+            vapi.on("error", (e) => {
+                console.error("Vapi Error:", e);
+                activeCall = false;
+                toggleButtons(false);
+                setStatus("❌ Ein Fehler ist aufgetreten.", "error");
+                setTimeout(() => { setStatus("Bereit zum Starten."); }, 4000);
+            });
+
+            btnHotel?.addEventListener("click", () => startDemo("hotel"));
+            btnImmo?.addEventListener("click", () => startDemo("immo"));
+            btnStop?.addEventListener("click", stopDemo);
+
+            window.addEventListener("beforeunload", () => {
+                if (activeCall) { vapi.stop(); }
+            });
+        });
     </script>
 </body>
 

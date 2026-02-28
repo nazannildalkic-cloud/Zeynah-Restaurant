@@ -1,405 +1,471 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZEYNAH | Live Demo - Voice AI</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
+    <title>ZEYNAH | Live Demo - Voice AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-body {
-    margin: 0;
-    font-family: 'Outfit', sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+        body {
+            margin: 0;
+            font-family: 'Outfit', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-/* Header */
-header {
-    padding: 20px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    background: rgba(15, 23, 42, 0.8);
-    z-index: 100;
-}
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.8);
+            z-index: 100;
+        }
 
-.logo {
-    font-weight: 700;
-    font-size: 24px;
-    letter-spacing: 0.5px;
-}
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
 
-/* Hero Section */
-.hero {
-    padding: 100px 0 120px;
-    text-align: center;
-}
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 120px;
+            text-align: center;
+        }
 
-h1 {
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 20px 0;
-}
+        h1 {
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 20px 0;
+        }
 
-.gradient {
-    background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
+        .gradient {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-.hero p {
-    font-size: 20px;
-    color: #94a3b8;
-    max-width: 600px;
-    margin: 0 auto;
-}
+        .hero p {
+            font-size: 20px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-/* Section */
-.section {
-    padding: 80px 0;
-    text-align: center;
-}
+        /* Section */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
 
-h2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin: 0 0 16px 0;
-}
+        h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+        }
 
-.section > .container > p {
-    font-size: 18px;
-    color: #94a3b8;
-    margin-bottom: 40px;
-}
+        .section>.container>p {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
 
-/* Buttons */
-.cta {
-    padding: 16px 32px;
-    background: #00d4ff;
-    color: #0f172a;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
-    font-family: 'Outfit', sans-serif;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 14px 0 rgba(0, 212, 255, 0.4);
-    margin: 10px;
-    min-width: 220px;
-}
+        /* Buttons */
+        .cta {
+            padding: 16px 32px;
+            min-height: 44px;
+            min-width: 44px;
+            background: #00d4ff;
+            color: #0f172a;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            font-family: 'Outfit', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px 0 rgba(0, 212, 255, 0.4);
+            margin: 10px;
+            min-width: 220px;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
 
-.cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px 0 rgba(0, 212, 255, 0.6);
-}
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px 0 rgba(0, 212, 255, 0.6);
+        }
 
-.cta:active {
-    transform: translateY(0);
-}
+        .cta:active {
+            transform: translateY(0);
+        }
 
-.cta:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
-}
+        .cta:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
 
-.cta.stop {
-    background: #dc3545;
-    color: white;
-    box-shadow: 0 4px 14px 0 rgba(220, 53, 69, 0.4);
-}
+        .cta.stop {
+            background: #dc3545;
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(220, 53, 69, 0.4);
+        }
 
-.cta.stop:hover {
-    box-shadow: 0 6px 20px 0 rgba(220, 53, 69, 0.6);
-}
+        .cta.stop:hover {
+            box-shadow: 0 6px 20px 0 rgba(220, 53, 69, 0.6);
+        }
 
-/* Status */
-#demo-status {
-    margin-top: 30px;
-    font-weight: 600;
-    font-size: 18px;
-    color: #00d4ff;
-    min-height: 27px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
+        /* Status */
+        #demo-status {
+            margin-top: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            color: #00d4ff;
+            min-height: 27px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
 
-#demo-status.error {
-    color: #ff4444;
-}
+        #demo-status.error {
+            color: #ff4444;
+        }
 
-#demo-status.success {
-    color: #22c55e;
-}
+        #demo-status.success {
+            color: #22c55e;
+        }
 
-.pulse {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: #00d4ff;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
+        .pulse {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #00d4ff;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
 
-@keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(1.2);
-    }
-}
+        @keyframes pulse {
 
-/* Permission Notice */
-.permission-notice {
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: rgba(0, 212, 255, 0.1);
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    border-radius: 6px;
-    color: #94a3b8;
-    font-size: 14px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
 
-/* Responsive */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-    }
-    
-    h2 {
-        font-size: 28px;
-    }
-    
-    .hero p {
-        font-size: 18px;
-    }
-    
-    .section > .container > p {
-        font-size: 16px;
-    }
-    
-    .hero {
-        padding: 60px 0 80px;
-    }
-    
-    .section {
-        padding: 60px 0;
-    }
-    
-    .cta {
-        min-width: 100%;
-        margin: 8px 0;
-    }
-}
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-    }
-    
-    h2 {
-        font-size: 24px;
-    }
-    
-    .hero p {
-        font-size: 16px;
-    }
-    
-    .logo {
-        font-size: 20px;
-    }
-}
-</style>
+        /* Permission Notice */
+        .permission-notice {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 6px;
+            color: #94a3b8;
+            font-size: 14px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .section>.container>p {
+                font-size: 16px;
+            }
+
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .cta {
+                min-width: 100%;
+                margin: 8px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-<div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-<div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">ZEYNAH</a></div>
-<nav style="display: flex; gap: 20px;">
-<a href="index.html" style="color: #94a3b8; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#00d4ff'" onmouseout="this.style.color='#94a3b8'">← Zurück</a>
-</nav>
-</div>
-</header>
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">ZEYNAH</a></div>
+            <nav style="display: flex; gap: 16px; align-items: center;">
+                <div class="lang-switch" style="display: flex; gap: 6px;">
+                    <button type="button" class="lang-btn active" data-lang="de" style="padding: 6px 12px; background: transparent; border: 1px solid rgba(0,212,255,0.3); color: #94a3b8; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 12px; min-height: 36px;">DE</button>
+                    <button type="button" class="lang-btn" data-lang="tr" style="padding: 6px 12px; background: transparent; border: 1px solid rgba(0,212,255,0.3); color: #94a3b8; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 12px; min-height: 36px;">TR</button>
+                    <button type="button" class="lang-btn" data-lang="en" style="padding: 6px 12px; background: transparent; border: 1px solid rgba(0,212,255,0.3); color: #94a3b8; border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 12px; min-height: 36px;">EN</button>
+                </div>
+                <a href="index.html" id="back-link" style="color: #94a3b8; text-decoration: none; transition: color 0.3s;"
+                    onmouseover="this.style.color='#00d4ff'" onmouseout="this.style.color='#94a3b8'">← Zurück</a>
+            </nav>
+        </div>
+    </header>
 
-<section class="hero">
-<div class="container">
-<h1>Voice AI, die <span class="gradient">Umsatz generiert</span></h1>
-<p>Automatisierte Gespräche. Qualifizierte Leads. Messbares Wachstum.</p>
-</div>
-</section>
+    <section class="hero">
+        <div class="container">
+            <h1 id="hero-title">Voice AI, die <span class="gradient">Umsatz generiert</span></h1>
+            <p id="hero-tagline">Automatisierte Gespräche. Qualifizierte Leads. Messbares Wachstum.</p>
+        </div>
+    </section>
 
-<section class="section">
-<div class="container">
-<h2>Live Voice Demo</h2>
-<p>Sprechen Sie direkt mit unseren KI-Agenten.</p>
+    <section class="section">
+        <div class="container">
+            <h2 id="section-title">Live Voice Demo</h2>
+            <p id="section-desc">Sprechen Sie direkt mit unseren KI-Agenten.</p>
 
-<div class="button-group">
-<button id="start-hotel" class="cta">🏨 Hotel & Gastronomie</button>
-<button id="start-immo" class="cta">🏠 Immobilien</button>
-</div>
-<button id="stop-demo" class="cta stop" style="display:none;">⏹ Gespräch beenden</button>
+            <div class="button-group">
+                <button id="start-hotel" class="cta">🏨 Hotel & Gastronomie</button>
+                <button id="start-immo" class="cta">🏠 Immobilien</button>
+            </div>
+            <button id="stop-demo" class="cta stop" style="display:none;">⏹ Gespräch beenden</button>
 
-<p id="demo-status">Bereit zum Starten.</p>
+            <p id="demo-status">Bereit zum Starten.</p>
 
-<div class="permission-notice">
-💡 Der Browser fragt nach Mikrofon-Zugriff. Bitte erlauben Sie dies für die Demo.
-</div>
-</div>
-</section>
+            <div class="permission-notice" id="permission-notice">
+                💡 Der Browser fragt nach Mikrofon-Zugriff. Bitte erlauben Sie dies für die Demo.
+            </div>
+        </div>
+    </section>
 
-<script type="module">
-import Vapi from "https://esm.sh/@vapi-ai/web@2.5.2";
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const PUBLIC_KEY = "946075e6-8ecc-45cb-9daf-7a22a29003e7";
-
-    const ASSISTANTS = {
-        hotel: "97c3950b-de86-4997-be45-b49218580ee0",
-        immo: "fe9075b3-4e9b-4fc1-b4a7-24fb3ac73a54"
-    };
-
-    const vapi = new Vapi(PUBLIC_KEY);
-
-    const btnHotel = document.getElementById("start-hotel");
-    const btnImmo = document.getElementById("start-immo");
-    const btnStop = document.getElementById("stop-demo");
-    const statusEl = document.getElementById("demo-status");
-
-    let activeCall = false;
-
-    function setStatus(text, type = "default") {
-        statusEl.className = type === "error" ? "error" : type === "success" ? "success" : "";
-        
-        if (type === "connected") {
-            statusEl.innerHTML = '<span class="pulse"></span> ' + text;
-        } else {
-            statusEl.textContent = text;
+    <script>
+        // i18n für zeynah.html
+        const T = {
+            de: { hero_title: "Voice AI, die <span class=\"gradient\">Umsatz generiert</span>", hero_tagline: "Automatisierte Gespräche. Qualifizierte Leads. Messbares Wachstum.", section_title: "Live Voice Demo", section_desc: "Sprechen Sie direkt mit unseren KI-Agenten.", hotel: "🏨 Hotel & Gastronomie", immo: "🏠 Immobilien", stop: "⏹ Gespräch beenden", status_ready: "Bereit zum Starten.", status_connecting: "Verbindung wird aufgebaut...", status_live: "🔴 Live - Sprechen Sie jetzt!", status_ending: "Verbindung wird beendet...", status_done: "✓ Gespräch beendet.", status_error_mic: "❌ Mikrofon-Zugriff verweigert. Bitte erlauben Sie den Zugriff.", status_error_conn: "❌ Verbindung fehlgeschlagen. Bitte versuchen Sie es erneut.", status_error: "❌ Ein Fehler ist aufgetreten.", permission: "💡 Der Browser fragt nach Mikrofon-Zugriff. Bitte erlauben Sie dies für die Demo.", back: "← Zurück" },
+            tr: { hero_title: "<span class=\"gradient\">Gelir Üreten</span> Voice AI", hero_tagline: "Otomatikleştirilmiş Konuşmalar. Nitelikli Müşteri Adayları. Ölçülebilir Büyüme.", section_title: "Canlı Ses Demo", section_desc: "Yapay zeka ajanlarımızla doğrudan konuşun.", hotel: "🏨 Otel & Gastronomi", immo: "🏠 Gayrimenkul", stop: "⏹ Görüşmeyi bitir", status_ready: "Başlamaya hazır.", status_connecting: "Bağlantı kuruluyor...", status_live: "🔴 Canlı - Şimdi konuşun!", status_ending: "Bağlantı sonlandırılıyor...", status_done: "✓ Görüşme sonlandı.", status_error_mic: "❌ Mikrofon erişimi reddedildi. Lütfen erişime izin verin.", status_error_conn: "❌ Bağlantı başarısız. Lütfen tekrar deneyin.", status_error: "❌ Bir hata oluştu.", permission: "💡 Tarayıcı mikrofon erişimi isteyecek. Demo için lütfen izin verin.", back: "← Geri" },
+            en: { hero_title: "Voice AI That <span class=\"gradient\">Generates Revenue</span>", hero_tagline: "Automated Conversations. Qualified Leads. Measurable Growth.", section_title: "Live Voice Demo", section_desc: "Talk directly with our AI agents.", hotel: "🏨 Hotel & Hospitality", immo: "🏠 Real Estate", stop: "⏹ End conversation", status_ready: "Ready to start.", status_connecting: "Connecting...", status_live: "🔴 Live - Speak now!", status_ending: "Ending connection...", status_done: "✓ Conversation ended.", status_error_mic: "❌ Microphone access denied. Please allow access.", status_error_conn: "❌ Connection failed. Please try again.", status_error: "❌ An error occurred.", permission: "💡 The browser will ask for microphone access. Please allow it for the demo.", back: "← Back" }
+        };
+        window.ZeynahT = T;
+        let currentLang = localStorage.getItem('zeynah-lang') || 'de';
+        function setLang(lang) {
+            if (!T[lang]) lang = 'de';
+            currentLang = lang;
+            localStorage.setItem('zeynah-lang', lang);
+            const t = T[lang];
+            const heroTitle = document.getElementById('hero-title');
+            if (heroTitle) heroTitle.innerHTML = t.hero_title;
+            const heroTagline = document.getElementById('hero-tagline');
+            if (heroTagline) heroTagline.textContent = t.hero_tagline;
+            const sectionTitle = document.getElementById('section-title');
+            if (sectionTitle) sectionTitle.textContent = t.section_title;
+            const sectionDesc = document.getElementById('section-desc');
+            if (sectionDesc) sectionDesc.textContent = t.section_desc;
+            const btnHotel = document.getElementById('start-hotel');
+            if (btnHotel) btnHotel.textContent = t.hotel;
+            const btnImmo = document.getElementById('start-immo');
+            if (btnImmo) btnImmo.textContent = t.immo;
+            const btnStop = document.getElementById('stop-demo');
+            if (btnStop) btnStop.textContent = t.stop;
+            const permissionNotice = document.getElementById('permission-notice');
+            if (permissionNotice) permissionNotice.textContent = t.permission;
+            const backLink = document.getElementById('back-link');
+            if (backLink) backLink.textContent = t.back;
+            const statusEl = document.getElementById('demo-status');
+            if (statusEl && !statusEl.innerHTML.includes('pulse')) statusEl.textContent = t.status_ready;
+            document.querySelectorAll('.lang-btn').forEach(btn => { btn.classList.toggle('active', btn.getAttribute('data-lang') === lang); });
         }
-    }
+        document.addEventListener('DOMContentLoaded', () => {
+            if ('serviceWorker' in navigator && location.protocol !== 'file:') { navigator.serviceWorker.register('sw.js', { scope: './' }).catch(() => {}); }
+            setLang(currentLang);
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => setLang(btn.getAttribute('data-lang'))));
+        });
+    </script>
+    <script type="module">
+        import Vapi from "https://esm.sh/@vapi-ai/web@2.5.2";
 
-    function toggleButtons(calling) {
-        btnHotel.disabled = calling;
-        btnImmo.disabled = calling;
-        btnStop.style.display = calling ? "inline-block" : "none";
-    }
+        document.addEventListener("DOMContentLoaded", () => {
 
-    async function startDemo(type) {
-        if (activeCall) return;
+            const PUBLIC_KEY = "946075e6-8ecc-45cb-9daf-7a22a29003e7";
 
-        activeCall = true;
-        toggleButtons(true);
-        setStatus("Verbindung wird aufgebaut...");
+            const ASSISTANTS = {
+                hotel: "97c3950b-de86-4997-be45-b49218580ee0",
+                immo: "fe9075b3-4e9b-4fc1-b4a7-24fb3ac73a54"
+            };
 
-        try {
-            await vapi.start(ASSISTANTS[type]);
-        } catch (err) {
-            console.error("Vapi Start Error:", err);
-            activeCall = false;
-            toggleButtons(false);
-            
-            if (err.message && err.message.includes("Permission")) {
-                setStatus("❌ Mikrofon-Zugriff verweigert. Bitte erlauben Sie den Zugriff.", "error");
-            } else {
-                setStatus("❌ Verbindung fehlgeschlagen. Bitte versuchen Sie es erneut.", "error");
+            const vapi = new Vapi(PUBLIC_KEY);
+
+            const btnHotel = document.getElementById("start-hotel");
+            const btnImmo = document.getElementById("start-immo");
+            const btnStop = document.getElementById("stop-demo");
+            const statusEl = document.getElementById("demo-status");
+
+            const t = () => (window.ZeynahT || {})[localStorage.getItem('zeynah-lang') || 'de'] || (window.ZeynahT || {}).de || {};
+
+            let activeCall = false;
+
+            function setStatus(text, type = "default") {
+                statusEl.className = type === "error" ? "error" : type === "success" ? "success" : "";
+
+                if (type === "connected") {
+                    statusEl.innerHTML = '<span class="pulse"></span> ' + text;
+                } else {
+                    statusEl.textContent = text;
+                }
             }
-        }
-    }
 
-    function stopDemo() {
-        if (!activeCall) return;
-        
-        try {
-            vapi.stop();
-            setStatus("Verbindung wird beendet...");
-        } catch (err) {
-            console.error("Vapi Stop Error:", err);
-            // Force cleanup
-            activeCall = false;
-            toggleButtons(false);
-            setStatus("Gespräch beendet.", "success");
-        }
-    }
+            function toggleButtons(calling) {
+                btnHotel.disabled = calling;
+                btnImmo.disabled = calling;
+                btnStop.style.display = calling ? "inline-block" : "none";
+            }
 
-    // Vapi Events
-    vapi.on("call-start", () => {
-        setStatus("🔴 Live - Sprechen Sie jetzt!", "connected");
-    });
+            async function startDemo(type) {
+                if (activeCall) return;
 
-    vapi.on("call-end", () => {
-        activeCall = false;
-        toggleButtons(false);
-        setStatus("✓ Gespräch beendet.", "success");
-        
-        setTimeout(() => {
-            setStatus("Bereit zum Starten.");
-        }, 3000);
-    });
+                activeCall = true;
+                toggleButtons(true);
+                setStatus(t().status_connecting || "Verbindung wird aufgebaut...");
 
-    vapi.on("error", (e) => {
-        console.error("Vapi Error:", e);
-        activeCall = false;
-        toggleButtons(false);
-        setStatus("❌ Ein Fehler ist aufgetreten.", "error");
-        
-        setTimeout(() => {
-            setStatus("Bereit zum Starten.");
-        }, 4000);
-    });
+                try {
+                    await vapi.start(ASSISTANTS[type]);
+                } catch (err) {
+                    console.error("Vapi Start Error:", err);
+                    activeCall = false;
+                    toggleButtons(false);
 
-    vapi.on("speech-start", () => {
-        console.log("User started speaking");
-    });
+                    if (err.message && err.message.includes("Permission")) {
+                        setStatus(t().status_error_mic || "❌ Mikrofon-Zugriff verweigert.", "error");
+                    } else {
+                        setStatus(t().status_error_conn || "❌ Verbindung fehlgeschlagen.", "error");
+                    }
+                }
+            }
 
-    vapi.on("speech-end", () => {
-        console.log("User stopped speaking");
-    });
+            function stopDemo() {
+                if (!activeCall) return;
 
-    vapi.on("message", (message) => {
-        console.log("Message from assistant:", message);
-    });
+                try {
+                    vapi.stop();
+                    setStatus(t().status_ending || "Verbindung wird beendet...");
+                } catch (err) {
+                    console.error("Vapi Stop Error:", err);
+                    // Force cleanup
+                    activeCall = false;
+                    toggleButtons(false);
+                    setStatus(t().status_done || "Gespräch beendet.", "success");
+                }
+            }
 
-    // Button Event Listeners
-    btnHotel.addEventListener("click", () => startDemo("hotel"));
-    btnImmo.addEventListener("click", () => startDemo("immo"));
-    btnStop.addEventListener("click", stopDemo);
+            // Vapi Events
+            vapi.on("call-start", () => {
+                setStatus(t().status_live || "🔴 Live - Sprechen Sie jetzt!", "connected");
+            });
 
-    // Cleanup on page unload
-    window.addEventListener("beforeunload", () => {
-        if (activeCall) {
-            vapi.stop();
-        }
-    });
+            vapi.on("call-end", () => {
+                activeCall = false;
+                toggleButtons(false);
+                setStatus(t().status_done || "✓ Gespräch beendet.", "success");
 
-});
-</script>
+                setTimeout(() => {
+                    setStatus(t().status_ready || "Bereit zum Starten.");
+                }, 3000);
+            });
 
+            vapi.on("error", (e) => {
+                console.error("Vapi Error:", e);
+                activeCall = false;
+                toggleButtons(false);
+                setStatus(t().status_error || "❌ Ein Fehler ist aufgetreten.", "error");
+
+                setTimeout(() => {
+                    setStatus(t().status_ready || "Bereit zum Starten.");
+                }, 4000);
+            });
+
+            vapi.on("speech-start", () => {
+                console.log("User started speaking");
+            });
+
+            vapi.on("speech-end", () => {
+                console.log("User stopped speaking");
+            });
+
+            vapi.on("message", (message) => {
+                console.log("Message from assistant:", message);
+            });
+
+            // Button Event Listeners
+            btnHotel.addEventListener("click", () => startDemo("hotel"));
+            btnImmo.addEventListener("click", () => startDemo("immo"));
+            btnStop.addEventListener("click", stopDemo);
+
+            // Cleanup on page unload
+            window.addEventListener("beforeunload", () => {
+                if (activeCall) {
+                    vapi.stop();
+                }
+            });
+
+        });
+    </script>
+
+    <footer
+        style="margin-top: 60px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.08); text-align: center;">
+        <div class="container">
+            <div style="font-weight: 700; color: #fff; margin-bottom: 5px;">Nazan Nil Dalkic | Founder</div>
+            <div style="font-size: 13px; color: #94a3b8;">&copy; 2026 ZEYNAH SYSTEMS | IMPACT VOICE CLUSTER</div>
+        </div>
+    </footer>
 </body>
+
 </html>

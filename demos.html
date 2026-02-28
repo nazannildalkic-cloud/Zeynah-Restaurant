@@ -3,487 +3,492 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
   <title>ZEYNAH - Live AI Demos</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <!-- Voice Demo Samples Section -->
-  <div class="demo-container" style="margin-top:40px;">
-    <header>
-      <h1>🔊 ZEYNAH Voice Demos</h1>
-      <p>Hören Sie echte Sprachbeispiele für jede Branche. Klicken Sie auf Play, um einen typischen KI-Agenten-Dialog zu
-        erleben.</p>
-    </header>
-    <div class="demo-grid">
-      <div class="demo-box">
-        <h3>🏢 B2B Lead-Qualifizierung</h3>
-        <audio controls preload="none">
-          <source src="voice-demo-b2b.mp3" type="audio/mpeg">
-          Ihr Browser unterstützt kein Audio.
-        </audio>
-        <a href="voice-demo-b2b.mp3" download class="demo-btn" style="margin-top:10px;">Download</a>
-      </div>
-      <div class="demo-box">
-        <h3>🏠 Immobilien Terminvergabe</h3>
-        <audio controls preload="none">
-          <source src="voice-demo-realestate.mp3" type="audio/mpeg">
-          Ihr Browser unterstützt kein Audio.
-        </audio>
-        <a href="voice-demo-realestate.mp3" download class="demo-btn" style="margin-top:10px;">Download</a>
-      </div>
-      <div class="demo-box">
-        <h3>🏥 Patiententerminbuchung</h3>
-        <audio controls preload="none">
-          <source src="voice-demo-healthcare.mp3" type="audio/mpeg">
-          Ihr Browser unterstützt kein Audio.
-        </audio>
-        <a href="voice-demo-healthcare.mp3" download class="demo-btn" style="margin-top:10px;">Download</a>
-      </div>
-      <div class="demo-box">
-        <h3>💼 Versicherungsabschluss</h3>
-        <audio controls preload="none">
-          <source src="voice-demo-insurance.mp3" type="audio/mpeg">
-          Ihr Browser unterstützt kein Audio.
-        </audio>
-        <a href="voice-demo-insurance.mp3" download class="demo-btn" style="margin-top:10px;">Download</a>
-      </div>
-      <div class="demo-box">
-        <h3>🎓 Kursanmeldung & Beratung</h3>
-        <audio controls preload="none">
-          <source src="voice-demo-education.mp3" type="audio/mpeg">
-          Ihr Browser unterstützt kein Audio.
-        </audio>
-        <a href="voice-demo-education.mp3" download class="demo-btn" style="margin-top:10px;">Download</a>
-      </div>
-      <div class="demo-box">
-        <h3>🍕 Restaurant Reservierungen</h3>
-        <audio controls preload="none">
-          <source src="voice-demo-restaurant.mp3" type="audio/mpeg">
-          Ihr Browser unterstützt kein Audio.
-        </audio>
-        <a href="voice-demo-restaurant.mp3" download class="demo-btn" style="margin-top:10px;">Download</a>
-      </div>
-    </div>
-  </div>
-  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="zeynahlogo.jpg.jpeg">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  :root {
-  --cyan: #00d4ff;
-  --gold: #d4a574;
-  --dark: #0a0e1a;
-  --mid: #141c2a;
-  --text: #e8eef7;
-  --muted: #8b95a8;
-  --border: rgba(0, 212, 255, 0.1);
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+    :root {
+      --cyan: #00d4ff;
+      --gold: #d4a574;
+      --dark: #0a0e1a;
+      --mid: #141c2a;
+      --text: #e8eef7;
+      --muted: #8b95a8;
+      --border: rgba(0, 212, 255, 0.1);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-  html {
-  scroll-behavior: smooth;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  body {
-  font-family: 'Outfit', sans-serif;
-  background: var(--dark);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-x: hidden;
-  }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-  .demo-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  }
+    .demo-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-  header {
-  padding: 40px 0 20px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 40px;
-  }
+    header {
+      padding: 40px 0 20px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  header h1 {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 10px;
-  background: linear-gradient(135deg, var(--cyan), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  }
+    header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, var(--cyan), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-  header p {
-  color: var(--muted);
-  font-size: 16px;
-  }
+    header p {
+      color: var(--muted);
+      font-size: 16px;
+    }
 
-  .demo-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-bottom: 40px;
-  }
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
 
-  .demo-box {
-  background: rgba(26, 35, 50, 0.8);
-  border: 1px solid var(--border);
-  border-radius: 15px;
-  padding: 30px;
-  cursor: pointer;
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
-  }
+    .demo-box {
+      background: rgba(26, 35, 50, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 30px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .demo-box:hover {
-  border-color: rgba(0, 212, 255, 0.3);
-  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1);
-  transform: translateY(-5px);
-  }
+    .demo-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
 
-  .demo-box h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: var(--text);
-  }
+    .demo-box:hover::before {
+      opacity: 1;
+    }
 
-  .demo-box p {
-  color: var(--muted);
-  margin-bottom: 20px;
-  flex: 1;
-  font-size: 14px;
-  line-height: 1.7;
-  }
+    .demo-box:hover {
+      border-color: rgba(0, 212, 255, 0.3);
+      box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1);
+      transform: translateY(-5px);
+    }
 
-  .demo-btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: linear-gradient(135deg, var(--cyan), var(--gold));
-  color: var(--dark);
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: var(--transition);
-  align-self: flex-start;
-  }
+    .demo-box h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-  .demo-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
-  }
+    .demo-box p {
+      color: var(--muted);
+      margin-bottom: 25px;
+      flex: 1;
+      font-size: 14px;
+      line-height: 1.7;
+    }
 
-  /* Modal Styles */
-  .modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 20px;
-  }
+    .demo-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      min-height: 44px;
+      min-width: 44px;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      background: linear-gradient(135deg, var(--cyan), var(--gold));
+      color: var(--dark);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      align-self: flex-start;
+      text-align: center;
+    }
 
-  .modal.active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: fadeIn 0.3s ease-in;
-  }
+    .demo-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    }
 
-  @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-  }
+    .back-btn {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: var(--transition);
+    }
 
-  .modal-content {
-  background: var(--mid);
-  border: 1px solid var(--border);
-  border-radius: 15px;
-  padding: 40px;
-  max-width: 800px;
-  width: 100%;
-  max-height: 85vh;
-  overflow-y: auto;
-  position: relative;
-  }
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--cyan);
+    }
 
-  .modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-  }
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(5px);
+    }
 
-  .modal-header h2 {
-  font-size: 24px;
-  color: var(--text);
-  }
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease-in;
+    }
 
-  .close-btn {
-  background: none;
-  border: none;
-  color: var(--muted);
-  font-size: 32px;
-  cursor: pointer;
-  transition: var(--transition);
-  }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
 
-  .close-btn:hover {
-  color: var(--cyan);
-  }
+      to {
+        opacity: 1;
+      }
+    }
 
-  .demo-conversation {
-  margin-bottom: 20px;
-  }
+    .modal-content {
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 800px;
+      width: 95%;
+      max-height: 85vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 0 100px rgba(0, 212, 255, 0.1);
+    }
 
-  .message {
-  margin-bottom: 20px;
-  animation: slideIn 0.4s ease-out;
-  }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
 
-  @keyframes slideIn {
-  from {
-  opacity: 0;
-  transform: translateY(10px);
-  }
-  to {
-  opacity: 1;
-  transform: translateY(0);
-  }
-  }
+    .modal-header h2 {
+      font-size: 24px;
+      color: var(--text);
+    }
 
-  .message.ai {
-  display: flex;
-  gap: 15px;
-  }
+    .close-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 32px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
 
-  .message.ai .avatar {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--cyan), var(--gold));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  flex-shrink: 0;
-  }
+    .close-btn:hover {
+      color: var(--cyan);
+    }
 
-  .message.ai .content {
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  border-radius: 10px;
-  padding: 15px;
-  color: var(--text);
-  line-height: 1.6;
-  max-width: 100%;
-  }
+    .demo-conversation {
+      margin-bottom: 20px;
+    }
 
-  .message.human {
-  display: flex;
-  justify-content: flex-end;
-  }
+    .message {
+      margin-bottom: 20px;
+      animation: slideIn 0.4s ease-out;
+    }
 
-  .message.human .content {
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(212, 165, 116, 0.15));
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  border-radius: 10px;
-  padding: 15px;
-  color: var(--text);
-  max-width: 80%;
-  line-height: 1.6;
-  }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
 
-  .message.info {
-  background: rgba(212, 165, 116, 0.1);
-  border-left: 3px solid var(--gold);
-  padding: 15px;
-  border-radius: 5px;
-  color: var(--muted);
-  font-size: 14px;
-  font-style: italic;
-  margin-top: 20px;
-  }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-  .processing {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px;
-  background: rgba(0, 212, 255, 0.05);
-  border-left: 3px solid var(--cyan);
-  border-radius: 5px;
-  margin: 20px 0;
-  color: var(--cyan);
-  font-weight: 600;
-  font-size: 13px;
-  }
+    .message.ai {
+      display: flex;
+      gap: 15px;
+    }
 
-  .processing::before {
-  content: '';
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 2px solid var(--cyan);
-  border-radius: 50%;
-  border-top-color: transparent;
-  animation: spin 0.8s linear infinite;
-  }
+    .message.ai .avatar {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--cyan), var(--gold));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+      color: var(--dark);
+      font-size: 14px;
+    }
 
-  @keyframes spin {
-  to { transform: rotate(360deg); }
-  }
+    .message.ai .content {
+      background: rgba(0, 212, 255, 0.05);
+      border: 1px solid rgba(0, 212, 255, 0.1);
+      border-radius: 15px;
+      border-top-left-radius: 0;
+      padding: 15px 20px;
+      color: var(--text);
+      line-height: 1.6;
+      max-width: 85%;
+      position: relative;
+    }
 
-  .data-extract {
-  background: rgba(0, 212, 255, 0.05);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  border-radius: 8px;
-  padding: 15px;
-  margin: 15px 0;
-  font-size: 12px;
-  font-family: 'Courier New', monospace;
-  color: var(--cyan);
-  }
+    .message.human {
+      display: flex;
+      justify-content: flex-end;
+    }
 
-  .data-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
-  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
-  }
+    .message.human .content {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      border-top-right-radius: 0;
+      padding: 15px 20px;
+      color: var(--text);
+      max-width: 80%;
+      line-height: 1.6;
+    }
 
-  .data-row:last-child {
-  border-bottom: none;
-  }
+    .message.info {
+      background: rgba(212, 165, 116, 0.05);
+      border-left: 3px solid var(--gold);
+      padding: 15px 20px;
+      border-radius: 10px;
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 25px;
+    }
 
-  .data-label {
-  color: var(--muted);
-  }
+    .processing {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      background: rgba(0, 212, 255, 0.03);
+      border: 1px dashed rgba(0, 212, 255, 0.2);
+      border-radius: 10px;
+      margin: 20px 0;
+      color: var(--cyan);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
 
-  .data-value {
-  color: var(--gold);
-  font-weight: 600;
-  }
+    .processing::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--cyan);
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 0.8s linear infinite;
+    }
 
-  .quality-score {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 10px 0;
-  }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
-  .score-bar {
-  flex: 1;
-  height: 8px;
-  background: rgba(0, 212, 255, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  }
+    .play-audio-btn {
+      background: rgba(0, 212, 255, 0.1);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      color: var(--cyan);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+      transition: var(--transition);
+      font-size: 12px;
+    }
 
-  .score-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--cyan), var(--gold));
-  border-radius: 10px;
-  animation: fillBar 1s ease-out;
-  }
+    .play-audio-btn:hover {
+      background: var(--cyan);
+      color: var(--dark);
+    }
 
-  @keyframes fillBar {
-  from { width: 0; }
-  to { width: var(--fill-width); }
-  }
+    .demo-stats {
+      margin-top: 30px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
 
-  .score-text {
-  color: var(--cyan);
-  font-weight: 600;
-  font-size: 12px;
-  }
+    .stat {
+      text-align: center;
+    }
 
-  .typing-indicator {
-  display: flex;
-  gap: 4px;
-  padding: 15px;
-  }
+    .stat-value {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 4px;
+    }
 
-  .typing-indicator span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--cyan);
-  animation: typing 1.4s infinite;
-  }
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-  .typing-indicator span:nth-child(2) {
-  animation-delay: 0.2s;
-  }
+    footer {
+      background: var(--mid);
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 100px;
+    }
 
-  .typing-indicator span:nth-child(3) {
-  animation-delay: 0.4s;
-  }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
 
-  @keyframes typing {
-  0%, 60%, 100% {
-  opacity: 0.3;
-  transform: translateY(0);
-  }
-  30% {
-  opacity: 1;
-  transform: translateY(-10px);
-  }
-  }
+    .footer-logo img {
+      height: 35px;
+      margin-bottom: 10px;
+    }
 
-  .demo-stats {
-  margin-top: 40px;
-  padding-top: 30px;
-  border-top: 1px solid var(--border);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  }
+    .footer-info p {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 400px;
+    }
 
-  .stat {
-  text-align: center;
-  }
+    .footer-founder {
+      text-align: right;
+    }
 
-  .stat-value {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--cyan);
-  margin-bottom: 5px;
-  }
+    .footer-founder .name {
+      font-weight: 700;
+      color: var(--text);
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
 
-  .stat-label {
-  font-size: 13px;
-  color: var(--muted);
-  }
+    .footer-founder .title {
+      color: var(--cyan);
+      font-size: 14px;
+      font-weight: 500;
+    }
 
-  @media(max-width: 768px) {
-  .demo-grid {
-  grid-template-columns: 1fr;
-  }
+    .footer-links {
+      margin-top: 15px;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+    }
 
-  .modal-content {
-  padding: 25px;
-  max-height: 90vh;
-  }
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      transition: var(--transition);
+    }
 
-  .demo-stats {
-  grid-template-columns: 1fr;
-  }
+    .footer-links a:hover {
+      color: var(--cyan);
+    }
 
-  .message.human .content {
-  max-width: 100%;
-  }
-  }
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .demo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-founder {
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+
+      .demo-stats {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -491,450 +496,317 @@
 
   <div class="demo-container">
     <header>
-      <h1>🎬 ZEYNAH Live AI Demos</h1>
-      <p>Sehen Sie, wie unsere KI-Agenten in Echtzeit arbeiten. Klicken Sie auf eine Demo um zu starten.</p>
+      <div>
+        <h1>🎬 ZEYNAH Live AI Demos</h1>
+        <p>Erleben Sie unsere spezialisierten KI-Systeme in Aktion.</p>
+      </div>
+      <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Zur Startseite
+      </a>
     </header>
 
     <div class="demo-grid">
-
       <div class="demo-box">
         <h3>🏢 B2B Lead-Qualifizierung</h3>
-        <p>Erleben Sie, wie ZEYNAH einen eingehenden Anruf in einen qualifizierten Lead umwandelt. Die KI stellt
-          intelligente Fragen, qualifiziert den Interessenten und übergeben die Daten direkt an Ihr CRM.</p>
+        <p>Automatisierte Erstgespräche, intelligente Bedarfsanalyse und CRM-Synchronisation für Premium-Consulting und
+          Agenturen.</p>
         <button class="demo-btn" onclick="openDemo('b2b')">Demo starten</button>
       </div>
 
       <div class="demo-box">
-        <h3>🏠 Immobilien Terminvergabe</h3>
-        <p>Automatische Besichtigungstermine, Interessenten-Validierung, Preisabfrage und direkte
-          Kalendersynchronisierung. Sehen Sie wie Makler ihre Auslastung verdoppeln.</p>
+        <h3>🏠 Immobilien Terminbuchung</h3>
+        <p>Interessenten-Filterung, automatische Besichtigungstermine und Exposé-Versand direkt aus dem Gespräch heraus.
+        </p>
         <button class="demo-btn" onclick="openDemo('realestate')">Demo starten</button>
       </div>
 
       <div class="demo-box">
-        <h3>🏥 Patiententerminbuchung</h3>
-        <p>Intelligente Terminvergabe, Anamnese-Datenerfassung und automatische Reminder. Perfekt für Arztpraxen,
-          Zahnkliniken und Wellness-Center.</p>
+        <h3>🏥 E-Health & Praxismanagement</h3>
+        <p>24/7 Terminvergabe für Arztpraxen, digitale Anamnese-Erfassung und DSGVO-konforme Patienten-Interaktion.</p>
         <button class="demo-btn" onclick="openDemo('healthcare')">Demo starten</button>
       </div>
 
       <div class="demo-box">
-        <h3>💼 Versicherungsabschluss</h3>
-        <p>Lead-Qualifizierung, Bedarf-Analyse, automatische Angebotserstellung. Sehen Sie wie die KI komplexe
-          Versicherungsfragen beantwortet und verkaufsreife Leads übergibt.</p>
-        <button class="demo-btn" onclick="openDemo('insurance')">Demo starten</button>
-      </div>
-
-      <div class="demo-box">
-        <h3>🎓 Kursanmeldung & Beratung</h3>
-        <p>Automatische Kursberatung basierend auf Qualifikation, Zeitplanung und Budget. Die KI führt durch den
-          kompletten Anmeldungsprozess bis zur Zahlung.</p>
-        <button class="demo-btn" onclick="openDemo('education')">Demo starten</button>
-      </div>
-
-      <div class="demo-box">
-        <h3>🍕 Restaurant Reservierungen</h3>
-        <p>24/7 Tischreservierungen, Event-Anfragen, Menü-Empfehlungen. Die KI bucht Tische direkt in Ihr System ein und
-          sendet Bestätigungen an Kunden.</p>
+        <h3>🍔 Gastronomie & Reservierung</h3>
+        <p>Intelligente Tischzuweisung, Event-Catering Management und automatische SMS-Bestätigungen für Restaurants.
+        </p>
         <button class="demo-btn" onclick="openDemo('restaurant')">Demo starten</button>
       </div>
 
-    </div>
-  </div>
-
-  <!-- Modals for each demo -->
-
-  <div id="b2b-modal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>🏢 B2B Lead Qualifizierung</h2>
-        <button class="close-btn" onclick="closeDemo()">&times;</button>
+      <div class="demo-box">
+        <h3>🏨 Hotel Buchung & Concierge</h3>
+        <p>Direktbuchungs-Optimierung, Room-Service Automatisierung und lokaler Empfehlungs-Guide für Gäste.</p>
+        <button class="demo-btn" onclick="openDemo('hotel')">Demo starten</button>
       </div>
-      <div class="demo-conversation" id="b2b-content"></div>
-      <div class="demo-stats">
-        <div class="stat">
-          <div class="stat-value">2:34 min</div>
-          <div class="stat-label">Dauer des Gesprächs</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">95%</div>
-          <div class="stat-label">Qualifzierungsquote</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">1</div>
-          <div class="stat-label">Verkaufsreifer Lead</div>
-        </div>
+
+      <div class="demo-box">
+        <h3>💼 Versicherungen & Finanzen</h3>
+        <p>Komplexe Tarifberatung, Bedarfsanalyse und automatisierte Angebotserstellung für Makler und Finanzberater.
+        </p>
+        <button class="demo-btn" onclick="openDemo('insurance')">Demo starten</button>
       </div>
     </div>
   </div>
 
-  <div id="realestate-modal" class="modal">
+  <!-- Main Demo Modal -->
+  <div id="demo-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2>🏠 Immobilien Terminvergabe</h2>
+        <h2 id="modal-title">AI Demo</h2>
         <button class="close-btn" onclick="closeDemo()">&times;</button>
       </div>
-      <div class="demo-conversation" id="realestate-content"></div>
-      <div class="demo-stats">
-        <div class="stat">
-          <div class="stat-value">1:45 min</div>
-          <div class="stat-label">Dauer</div>
+      <div class="demo-conversation" id="demo-content"></div>
+      <div id="demo-stats-container"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="demo-container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo"><img src="zeynahlogo.jpg.jpeg" alt="ZEYNAH"></div>
+          <p>ZEYNAH entwickelt die nächste Generation von Voice AI-Systemen für Unternehmen, die Skalierung durch
+            Automatisierung suchen.</p>
         </div>
-        <div class="stat">
-          <div class="stat-value">📅</div>
-          <div class="stat-label">Termin vereinbart</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value">✅</div>
-          <div class="stat-label">Integration bestätigt</div>
+        <div class="footer-founder">
+          <div class="name">Nazan Nil Dalkic | Founder</div>
+          <div class="title">Voice AI Strategie & Implementierung</div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+          </div>
         </div>
       </div>
     </div>
+  </footer>
 
-    <div id="healthcare-modal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>🏥 Patiententerminbuchung</h2>
-          <button class="close-btn" onclick="closeDemo()">&times;</button>
-        </div>
-        <div class="demo-conversation" id="healthcare-content"></div>
-        <div class="demo-stats">
-          <div class="stat">
-            <div class="stat-value">3:12 min</div>
-            <div class="stat-label">Dauer</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">📝</div>
-            <div class="stat-label">Anamnese erfasst</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">📬</div>
-            <div class="stat-label">Reminder geplant</div>
-          </div>
-        </div>
-      </div>
+  <script>
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') { navigator.serviceWorker.register('sw.js', { scope: './' }).catch(function(){}); }
+    const demoScripts = {
+      b2b: {
+        title: "B2B Lead-Qualifizierung",
+        stats: [
+          { label: "Dauer", value: "2:34 min" },
+          { label: "Qualität", value: "98%" },
+          { label: "Status", value: "CRM-Sync" }
+        ],
+        script: [
+          { type: 'ai', text: 'Guten Tag! Hier ist ZEYNAH von Allianz Consulting. Ich rufe an bezüglich Ihrer Anfrage zur Lead-Generierung. Passt es Ihnen kurz?' },
+          { type: 'human', text: 'Hallo! Ja, passt gerade. Ich bin Thomas Weber. Worum geht es genau?' },
+          { type: 'ai', text: 'Wir haben ein System entwickelt, das Ihre B2B-Sales-Pipe vollautomatisch füllt. Darf ich fragen: Wie viele Mitarbeiter hat Ihr Vertriebsteam aktuell?' },
+          { type: 'human', text: 'Wir sind aktuell zu fünft im Sales, suchen aber ständig neue Leute.' },
+          { type: 'processing', text: '🔄 Segment-Analyse: KMU | 5-10 MA | Wachstum-Modus' },
+          { type: 'ai', text: 'Verstehe. Wenn ich Ihnen zeigen könnte, wie ZEYNAH Ihrem Team pro Monat 50+ vorqualifizierte Termine liefert – wäre das ein Case für Sie?' },
+          { type: 'human', text: 'Definitiv. Aber wie sieht die Qualität der Leads aus?' },
+          { type: 'ai', text: 'Exzellent! Wir qualifizieren nach BANT-Kriterien in Echtzeit. Nur wer Budget und echtes Interesse hat, landet in Ihrem Kalender. Sollen wir morgen um 10 Uhr eine kurze Live-Demo machen?' },
+          { type: 'human', text: 'Ja, das machen wir. Schicken Sie mir den Link!' },
+          { type: 'processing', text: '✅ Termin gebucht: Morgen 10:00 Uhr | CRM updated' },
+          { type: 'info', text: '📊 Ergebnis: Qualifizierter Lead | Pipeline-Value: €15.000 | Status: Demo geplant' }
+        ]
+      },
+      realestate: {
+        title: "Immobilien Terminbuchung",
+        stats: [
+          { label: "Anrufzeit", value: "1:45 min" },
+          { label: "Zufriedenheit", value: "100%" },
+          { label: "Action", value: "SMS gesendet" }
+        ],
+        script: [
+          { type: 'ai', text: 'Hallo! Willkommen bei RE/MAX. Ich bin ZEYNAH. Suchen Sie eine Immobilie oder möchten Sie eine verkaufen?' },
+          { type: 'human', text: 'Hallo! Ich habe die 3-Zimmer-Wohnung in Berlin-Mitte gesehen. Ist diese noch verfügbar?' },
+          { type: 'ai', text: 'Einen Moment bitte... Ja, das Objekt in der Invalidenstraße ist noch frei! Möchten Sie die Wohnung besichtigen?' },
+          { type: 'human', text: 'Ja, sehr gerne. Am liebsten am Wochenende.' },
+          { type: 'processing', text: '📅 Kalender-Check: Objekt #42 | Sa 14:00 Uhr | FREI' },
+          { type: 'ai', text: 'Ich habe noch einen freien Slot am Samstag um 14:00 Uhr. Passt Ihnen das?' },
+          { type: 'human', text: 'Ja, das passt perfekt.' },
+          { type: 'processing', text: '📲 SMS-Versand: Bestätigung + Standort-Pin' },
+          { type: 'ai', text: 'Wunderbar! Ich habe Sie eingetragen. Sie erhalten jetzt eine SMS mit dem Standort und dem digitalen Exposé. Haben Sie noch weitere Fragen?' },
+          { type: 'human', text: 'Nein danke, das war\'s.' },
+          { type: 'info', text: '📊 Ergebnis: Besichtigung gebucht | Lead-Impact: HIGH | Follow-up: Automatisches Exposé' }
+        ]
+      },
+      healthcare: {
+        title: "Praxismanagement",
+        stats: [
+          { label: "Wartezeit", value: "0 sec" },
+          { label: "Daten", value: "DSGVO OK" },
+          { label: "Typ", value: "Notfall" }
+        ],
+        script: [
+          { type: 'ai', text: 'Praxis Dr. Müller, ZEYNAH am Apparat. Wie kann ich Ihnen helfen?' },
+          { type: 'human', text: 'Hallo, ich habe starke Zahnschmerzen und brauche dringend einen Termin.' },
+          { type: 'ai', text: 'Das tut mir leid zu hören. Wir haben heute Nachmittag um 16:15 Uhr einen Notfall-Termin frei. Sollen wir diesen für Sie reservieren?' },
+          { type: 'human', text: 'Ja bitte! Das wäre eine große Hilfe.' },
+          { type: 'processing', text: '💊 Anamnese-Check | Status: Akut | Priorität: 1' },
+          { type: 'ai', text: 'Gerne! Sind Sie bereits Patient bei uns?' },
+          { type: 'human', text: 'Nein, ich wäre das erste Mal bei Ihnen.' },
+          { type: 'ai', text: 'Kein Problem. Damit wir alles vorbereiten können: Wie sind Sie versichert? Privat oder gesetzlich?' },
+          { type: 'human', text: 'Privat versichert.' },
+          { type: 'processing', text: '✅ Patientendaten erfasst | Notfall-Slot gesichert' },
+          { type: 'ai', text: 'Alles klar. Ich habe den Termin für 16:15 Uhr reserviert. Bitte bringen Sie Ihre Versichertenkarte mit. Wir freuen uns auf Ihren Besuch!' },
+          { type: 'info', text: '📊 Ergebnis: Notfallpatient gewonnen | Auslastung: OPTIMAL | Umsatzpotenzial: PRO' }
+        ]
+      },
+      restaurant: {
+        title: "Restaurant Reservierung",
+        stats: [
+          { label: "Personen", value: "4" },
+          { label: "Anlass", value: "Jubiläum" },
+          { label: "Add-on", value: "Wein-Vorwahl" }
+        ],
+        script: [
+          { type: 'ai', text: 'La Bella Italia, ZEYNAH hier. Möchten Sie einen Tisch reservieren?' },
+          { type: 'human', text: 'Hallo! Wir würden gerne nächsten Freitag für 4 Personen reservieren.' },
+          { type: 'ai', text: 'Gerne! Für Freitagabend biete ich Ihnen 19:00 Uhr oder 20:30 Uhr an. Was gefällt Ihnen besser?' },
+          { type: 'human', text: '19:00 Uhr bitte. Wir haben nämlich etwas zu feiern.' },
+          { type: 'processing', text: '🎉 Event erkannt: Feier | VIP-Setup aktiviert' },
+          { type: 'ai', text: 'Oh, ein besonderer Anlass! Darf ich fragen, was gefeiert wird? Dann bereite ich den Tisch entsprechend vor.' },
+          { type: 'human', text: 'Es ist unser 10. Hochzeitstag.' },
+          { type: 'ai', text: 'Herzlichen Glückwunsch! Ich reserviere Ihnen unseren Fenstertisch mit Blick auf den Kanal und stelle eine Flasche Prosecco auf\'s Haus bereit. Unter welchem Namen darf ich buchen?' },
+          { type: 'human', text: 'Müller, bitte.' },
+          { type: 'processing', text: '🍷 Tisch reserviert | Prosecco-Order: YES | SMS Bestätigung raus' },
+          { type: 'info', text: '📊 Ergebnis: Premium-Gast gebucht | Customer Loyalty: HIGH | Umsatz: €250-300' }
+        ]
+      },
+      hotel: {
+        title: "Hotel Buchung & Concierge",
+        stats: [
+          { label: "Direktbuchung", value: "YES" },
+          { label: "Upsell", value: "Spa-Ticket" },
+          { label: "UX-Score", value: "9.8/10" }
+        ],
+        script: [
+          { type: 'ai', text: 'Grand Hotel Central, ZEYNAH Ihr digitaler Concierge. Wie kann ich Ihren Aufenthalt planen?' },
+          { type: 'human', text: 'Hallo, ich bräuchte ein Zimmer für zwei Nächte ab dem 12. März.' },
+          { type: 'processing', text: '🔍 Verfügbarkeit: 12. - 14. März | Cat: Superior | Status: OK' },
+          { type: 'ai', text: 'Wir haben für diesen Zeitraum noch ein Superior Zimmer mit Kingsize-Bett frei. Der Preis liegt bei €210 pro Nacht inklusive Frühstück. Möchten Sie direkt buchen?' },
+          { type: 'human', text: 'Ja, das klappt. Kann man bei Ihnen auch direkt eine Massage im Spa buchen?' },
+          { type: 'ai', text: 'Natürlich! Ich kann Ihnen einen Slot am Samstagvormittag reservieren. Wir haben noch um 10:00 Uhr einen Termin für eine Ganzkörpermassage frei. €85 für 60 Minuten. Soll ich das hinzufügen?' },
+          { type: 'human', text: 'Ja, machen Sie das bitte dazu.' },
+          { type: 'processing', text: '🏨 Buchung + Spa-Upsell | Zimmer #302 | Total: €505' },
+          { type: 'ai', text: 'Perfekt! Ich habe alles gebucht. Der Buchungslink geht jetzt per E-Mail an Sie raus. Wir freuen uns auf Sie!' },
+          { type: 'info', text: '📊 Ergebnis: Direktbuchung + Upsell | Commission saved: 15% | Gastwert: +€505' }
+        ]
+      },
+      insurance: {
+        title: "Versicherung & Investment",
+        stats: [
+          { label: "Lead-Qualität", value: "PRO" },
+          { label: "Abschluss", value: "In Vorbereitung" },
+          { label: "Recall", value: "Automated" }
+        ],
+        script: [
+          { type: 'ai', text: 'Versicherungs-Check ZEYNAH hier. Suchen Sie eine Optimierung für Ihre Altersvorsorge?' },
+          { type: 'human', text: 'Hallo, ja. Ich habe gehört, es gibt neue steuerliche Vorteile bei privaten Renten.' },
+          { type: 'ai', text: 'Richtig! Seit Januar gibt es neue Fördermöglichkeiten. Um Ihren Vorteil exakt zu berechnen: In welcher Gehaltsklasse liegen Sie ungefähr jährlich?' },
+          { type: 'human', text: 'Ich verdiene etwa 65.000 Euro brutto.' },
+          { type: 'processing', text: '📈 Steuerklasse-Analyse: Single | Gehalt 65k | Potential: HOCH' },
+          { type: 'ai', text: 'Bei diesem Einkommen können Sie bis zu €1.200 Steuern pro Jahr sparen, wenn wir das Modell "Zukunfts-Fit" wählen. Würden Sie gerne eine persönliche Berechnung von einem Experten sehen?' },
+          { type: 'human', text: 'Ja, das klingt nach viel Geld.' },
+          { type: 'ai', text: 'Das ist es! Ich leite Ihre Daten an unseren Vorsorge-Spezialisten Herrn Wagner weiter. Er ruft Sie morgen um 15:00 Uhr an, um Ihnen das Modell kurz zu erklären. Passt das?' },
+          { type: 'human', text: '15 Uhr ist gut. Danke!' },
+          { type: 'processing', text: '✅ High-Ticket Lead qualifiziert | Rückruf-Termin gesetzt' },
+          { type: 'info', text: '📊 Ergebnis: High-Intent Financial Lead | LTV: €3.500+ | Status: Appointment set' }
+        ]
+      }
+    };
 
-      <div id="insurance-modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2>💼 Versicherungsabschluss</h2>
-            <button class="close-btn" onclick="closeDemo()">&times;</button>
-          </div>
-          <div class="demo-conversation" id="insurance-content"></div>
-          <div class="demo-stats">
-            <div class="stat">
-              <div class="stat-value">4:21 min</div>
-              <div class="stat-label">Dauer</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">€2.850</div>
-              <div class="stat-label">Angebotswert</div>
-            </div>
-            <div class="stat">
-              <div class="stat-value">📊</div>
-              <div class="stat-label">Lead generiert</div>
-            </div>
-          </div>
-        </div>
+    let speechVoices = [];
+    function loadVoices() {
+      speechVoices = window.speechSynthesis.getVoices();
+    }
+    if (window.speechSynthesis.onvoiceschanged !== undefined) {
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    loadVoices();
 
-        <div id="education-modal" class="modal">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2>🎓 Kursanmeldung & Beratung</h2>
-              <button class="close-btn" onclick="closeDemo()">&times;</button>
-            </div>
-            <div class="demo-conversation" id="education-content"></div>
-            <div class="demo-stats">
-              <div class="stat">
-                <div class="stat-value">3:45 min</div>
-                <div class="stat-label">Dauer</div>
-              </div>
-              <div class="stat">
-                <div class="stat-value">€1.299</div>
-                <div class="stat-label">Kurs gebucht</div>
-              </div>
-              <div class="stat">
-                <div class="stat-value">✅</div>
-                <div class="stat-label">Zahlung bestätigt</div>
-              </div>
-            </div>
-          </div>
+    function openDemo(type) {
+      const demo = demoScripts[type];
+      if (!demo) return;
 
-          <div id="restaurant-modal" class="modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2>🍕 Restaurant Reservierungen</h2>
-                <button class="close-btn" onclick="closeDemo()">&times;</button>
-              </div>
-              <div class="demo-conversation" id="restaurant-content"></div>
-              <div class="demo-stats">
-                <div class="stat">
-                  <div class="stat-value">1:28 min</div>
-                  <div class="stat-label">Dauer</div>
-                </div>
-                <div class="stat">
-                  <div class="stat-value">🍽️</div>
-                  <div class="stat-label">Tisch reserviert</div>
-                </div>
-                <div class="stat">
-                  <div class="stat-value">📧</div>
-                  <div class="stat-label">Bestätigung gesendet</div>
-                </div>
-              </div>
-            </div>
+      const modal = document.getElementById('demo-modal');
+      const title = document.getElementById('modal-title');
+      const content = document.getElementById('demo-content');
+      const statsContainer = document.getElementById('demo-stats-container');
 
-            <script>
-              // Demo scripts
-              const demoScripts = {
-                b2b: [
-                  { type: 'ai', text: 'Guten Tag! Vielen Dank für Ihren Anruf. Dies ist ZEYNAH, Ihr KI-Assistent der Allianz Consulting. Wie kann ich Ihnen heute helfen?' },
-                  { type: 'human', text: 'Hallo! Ich bin Thomas Weber von der ACME GmbH. Ich bin interessiert an Ihrer Lead-Generierungslösung.' },
-                  { type: 'ai', text: 'Sehr gerne, Herr Weber. ACME GmbH - schön Sie kennenzulernen. Gerne helfe ich. Darf ich kurz fragen, in welcher Branche ACME tätig ist?' },
-                  { type: 'human', text: 'Wir sind ein B2B SaaS-Unternehmen im Bereich Projektmanagement-Software. Etwa 50 Mitarbeiter, gegründet 2019.' },
-                  { type: 'processing', text: '🔄 Synergien-Analyse: Branche | Gründungsjahr | Teamgröße | Marktpotential' },
-                  { type: 'ai', text: 'Sehr interessant! B2B SaaS Projektmanagement hat enormes Wachstumspotenzial. Und wie läuft aktuell Ihre Lead-Generierung?' },
-                  { type: 'human', text: 'Ehrlich gesagt eher unterdurchschnittlich. Wir generieren etwa 15-20 Leads pro Monat. Die meisten sind nicht mal unsere Zielgruppe.' },
-                  { type: 'ai', text: 'Das ist leider häufig bei manuellen Prozessen der Fall. Und wie viele dieser 15-20 Leads werden zu zahlenden Kunden?' },
-                  { type: 'human', text: 'Na ja, vielleicht 2-3 pro Monat. 10-15% Conversion-Rate ist furchtbar.' },
-                  { type: 'processing', text: '📊 KPI-Match: 15 Leads | 3 Konversionen | 20% CR | CAC: €500' },
-                  { type: 'ai', text: 'Das ist tatsächlich suboptimal. Mit ZEYNAH können wir das dramatisch verbessern. Was wäre Ihr ideales Ziel für die nächsten 6 Monate?' },
-                  { type: 'human', text: 'Realistisch? Ich würde sagen 80-100 hochqualifizierte Leads pro Monat. Dann könnten wir auf 10-15 zahlende Kunden monatslich kommen.' },
-                  { type: 'ai', text: 'Das ist absolut realistisch - und mit intelligenter Automatisierung sogar konservativ geschätzt! Mit AI-Voice-Agents können Sie leicht 100+ Leads monatslich erreichen.' },
-                  { type: 'processing', text: '✅ Lead-Qualifizierung: 95% | Bedarf erkannt: HOCHWERTIG | Fit-Score: 98%' },
-                  { type: 'ai', text: 'Herr Weber, basierend auf Ihren Angaben bin ich sehr optimistisch. Sie sind ein perfektes Fit für ZEYNAH. Kann ich Ihnen einen konkreten Vorschlag machen?' },
-                  { type: 'human', text: 'Ja bitte! Wie funktioniert das genau?' },
-                  { type: 'ai', text: 'Perfekt. Unsere Voice-AI führt automatisch qualifizierende Anrufe mit potenziellen Kunden. Sie stellt intelligente Fragen, qualifiziert in Echtzeit und übergeben nur die besten Leads an Ihr Team. Implementierung: 2 Wochen.' },
-                  { type: 'human', text: 'Das klingt wirklich spannend! Können wir einen Termin für ein ausführliches Gespräch machen?' },
-                  { type: 'ai', text: '✅ Absolut! Ich verbinde Sie jetzt mit unserem Enterprise-Spezialisten Stefan Müller. Er wird Ihnen alles in Detail erklären. Können wir einen Termin für morgen 14:00 Uhr vereinbaren?' },
-                  { type: 'human', text: 'Ja, absolut perfekt. Sehr gerne!' },
-                  { type: 'ai', text: '✅ Großartig! Termin ist gebucht: Morgen 14:00 Uhr mit Stefan Müller (Sales Spezialist). Sie erhalten eine Kalender-Einladung und einen Zoom-Link. Danke für das Gespräch, Herr Weber!' },
-                  { type: 'processing', text: '🎯 Lead-Status VERKAUFSREIF | Qualitäts-Score: 98% | Sales-Alert: GESENDET | LTV: €45.000' },
-                  { type: 'info', text: '📊 ERGEBNIS: Hochwertiger B2B Lead | LTV: €45.000 | Sales-Team: BENACHRICHTIGT | Nächster Schritt: Demo + Angebot' }
-                ],
+      title.innerHTML = `<span>${demo.title}</span>`;
+      content.innerHTML = '';
+      statsContainer.innerHTML = '';
 
-                realestate: [
-                  { type: 'ai', text: 'Guten Tag! Ich bin ZEYNAH, digitaler Makler-Assistent von RE/MAX Premium Berlin. Wie kann ich Ihnen mit Ihrer Immobiliensuche helfen?' },
-                  { type: 'human', text: 'Hi! Ich bin auf der Suche nach einer schönen 3-Zimmer-Wohnung in Berlin-Mitte, idealerweise unter 500.000 Euro.' },
-                  { type: 'ai', text: 'Wunderbar! Berlin-Mitte ist aktuell sehr gefragt. Damit ich die perfekte Wohnung für Sie finde - einige Fragen: Wann möchten Sie einziehen?' },
-                  { type: 'human', text: 'Idealerweise in den nächsten 2-3 Monaten. Und ich brauche mindestens 80 qm mit Balkon.' },
-                  { type: 'processing', text: '🔍 Suchkriterien-Profil: 3Z | 80+qm | Balkon | Berlin-Mitte | <500k€ | Timeframe: 2-3M' },
-                  { type: 'ai', text: 'Perfekt dokumentiert! Haben Sie noch weitere Wünsche? Zum Beispiel Lage, Etage, Sanierungszustand?' },
-                  { type: 'human', text: 'Gerne höher gelegen - mindestens 3. Obergeschoss. Und am liebsten moderne Ausstattung.' },
-                  { type: 'ai', text: 'Ausgezeichnet. Ich habe gerade nach meinen Kriterien 4 perfekte Objekte für Sie gefunden! Alle unter 500k€, 3 Zimmer, Balkon, moderner Ausstattung.' },
-                  { type: 'processing', text: '📋 Datenbank-Abgleich: 4 Objekte gefunden | Matches: 100%' },
-                  { type: 'ai', text: 'Hier sind die Top 3 Kandidaten:\n\n1️⃣ Prenzlauer Berg: 85qm, 3. Etage, 2021 renoviert → €485.000\n2️⃣ Friedrichshain: 92qm, 4. Etage, Dachterrasse → €495.000\n3️⃣ Charlottenburg: 88qm, 5. Etage, mit Kamin → €480.000\n\nWelches interessiert Sie am meisten?' },
-                  { type: 'human', text: 'Die in Prenzlauer Berg klingt cool. Können Sie einen Besichtigungstermin arrangieren?' },
-                  { type: 'processing', text: '✅ Objekt-Favorit: Prenzlauer Berg | Exposé aktiviert | Makler-Kalender abgefragt' },
-                  { type: 'ai', text: 'Sehr gerne! Ich habe noch heute 15:00 Uhr und morgen 10:00 + 14:30 Uhr verfügbar. Was passt Ihnen am besten?' },
-                  { type: 'human', text: 'Morgen um 10:00 Uhr wäre perfekt!' },
-                  { type: 'ai', text: '✅ Besichtigung bestätigt!\n📅 Datum: Morgen, 10:00 Uhr\n📍 Adresse: Schönhauser Allee 42, 10435 Berlin\n👤 Makler: Michael Schmidt\n📞 Tel: 030-555123\n🔑 Türcode: 1234#' },
-                  { type: 'processing', text: '🔄 Kalender-Sync | SMS versenden | Exposée mailen | Makler-Alert' },
-                  { type: 'ai', text: 'Kann ich Ihnen auch schon Details zu den anderen 2 Objekten per Mail zschicken, damit Sie diese auch im Blick haben?' },
-                  { type: 'human', text: 'Ja gerne, machen Sie!' },
-                  { type: 'ai', text: '✅ Alles erledigt! Sie erhalten gerade die E-Mail mit allen 3 Exposés und Besichtigungsdetails. Viel Erfolg morgen! Haben Sie noch Fragen?' },
-                  { type: 'human', text: 'Nein, danke! Das war sehr hilfreich.' },
-                  { type: 'ai', text: '✅ Perfekt! Viel Glück beim Besichtigungstermin. Falls Sie Fragen haben, schreiben Sie mir einfach. Auf Wiedersehen!' },
-                  { type: 'info', text: '📊 ERGEBNIS: 3 Besichtigungen geplant | Lead-Wert: 3x€482k = €1.457.000 | Provision: ~€29.140' }
-                ],
+      modal.classList.add('active');
 
-                healthcare: [
-                  { type: 'ai', text: 'Guten Morgen! Sie rufen die Zahnarztpraxis Dr. Bergmann an. Ich bin Ihr digitaler Sprechstunden-Assistent. Wie kann ich Ihnen helfen?' },
-                  { type: 'human', text: 'Hallo, ich habe seit gestern Abend starke Zahnschmerzen. Könnte ich noch heute einen Termin bekommen?' },
-                  { type: 'ai', text: 'Gerne schaue ich nach einem Notfalltermin! Um mich besser um Sie kümmern zu können - sind Sie schon Patient bei uns oder ist es die erste Konsultation?' },
-                  { type: 'human', text: 'Erste Konsultation, ich bin gerade neu in der Gegend.' },
-                  { type: 'ai', text: 'Willkommen! Damit ich das richtig zuordnen kann - wo genau sitzt der Schmerz? Oben oder unten? Und seit wie lange?' },
-                  { type: 'human', text: 'Oben rechts. Seit gestern Abend. Schmerzen besonders beim Kauen.' },
-                  { type: 'processing', text: '🔍 Symptome-Katalog: Schmerz-Lage | Dauer | Trigger | Schweregrad | Diagnose-Hinweis' },
-                  { type: 'ai', text: 'Das könnte auf eine Entzündung oder ein Loch hindeuten. Eine Untersuchung ist dringend nötig. Glücklicherweise habe ich noch heute 16:30 Uhr eine Notfall-Sprechstunde frei. Passt das?' },
-                  { type: 'human', text: 'Ja super, danke! Um wie viel Uhr kann ich kommen?' },
-                  { type: 'ai', text: '✅ Perfekt! Notfall-Termin gebucht:\n📅 Heute, 16:30 Uhr\n⏱️ Dauer: ca. 30 Min\n📍 Adresse: Charlottenstr. 45, 10115 Berlin\n🅿️ Parkplatz: Direkt vor der Praxis\n\nBitte füllen Sie vorher unser Online-Formular aus.' },
-                  { type: 'processing', text: '📋 Anmeldeformular generieren | SMS-Reminder: 16:00 | Zahnarzt-Alert | Instrumenten-Vorbereitung' },
-                  { type: 'ai', text: 'Ich sende Ihnen einen Link zum digitalen Anmeldeformular per SMS. Können Sie Ihren Namen noch einmal bestätigen?' },
-                  { type: 'human', text: 'Jan Keller, K-E-L-L-E-R.' },
-                  { type: 'ai', text: '✅ Eingetragen! Kleine Versicherungsfrage noch: Haben Sie eine Krankenversicherung dabei?' },
-                  { type: 'human', text: 'Ja, Techniker Krankenkasse.' },
-                  { type: 'processing', text: '💳 Versicherungsdaten erfasst: TK | Gültig: 12/2029 | Verifizierung: OK' },
-                  { type: 'ai', text: '✅ Alles erfasst! Das war schnell. Sie bekommen jetzt:\n📱 SMS mit Directions + Parkinginfo\n📧 E-Mail mit Anmeldeformular-Link\n📬 Reminder heute um 16:00 Uhr (30 Min vorher)\n\nHaben Sie noch Fragen?' },
-                  { type: 'human', text: 'Nein, alles perfekt! Vielen Dank!' },
-                  { type: 'info', text: '📊 ERGEBNIS: Notfall-Termin reserviert | 100% Auslastung | Patientendaten: ERFASST | Estimated Revenue: €180-250' }
-                ],
+      demo.script.forEach((msg, index) => {
+        setTimeout(() => {
+          const msgDiv = document.createElement('div');
+          msgDiv.className = `message ${msg.type}`;
 
-                insurance: [
-                  { type: 'ai', text: 'Guten Morgen! Sie sprechen mit ZEYNAH von der Allianz Versicherung. Ich rufe Sie an, weil Sie unser neues Premium-Health-Paket angefordert haben. Passt es Ihnen gerade?' },
-                  { type: 'human', text: 'Hallo ja! Ich bin sehr interessiert, aber habe noch viele Fragen.' },
-                  { type: 'ai', text: 'Sehr gerne beantworte ich alle! Fangen wir an. Was ist für Sie persönlich am wichtigsten in einer Krankenversicherung?' },
-                  { type: 'human', text: 'Gute Zahnabdeckung, Brille, und möglichst kein Papierkram mit Online-Management.' },
-                  { type: 'processing', text: '💡 Bedürfnis-Profil: Zahnabdeckung HIGH | Sehhilfen HIGH | Convenience HIGH | Digitalisierung HIGH' },
-                  { type: 'ai', text: 'Perfekt! Unser Premium-Paket deckt exakt das ab:\n\n🦷 Zahnbehandlung: 100% bis €800/Jahr\n👓 Sehhilfen: €300/Jahr\n📱 App zur kompletten Verwaltung - 0% Papierkram\n\nKostenpunkt: €186/Monat für Ihre Altersgruppe. Wie klingt das?' },
-                  { type: 'human', text: 'Das klingt super! Aber was ist mit Naturheilkunde und Physiotherapie?' },
-                  { type: 'processing', text: '📊 Add-on-Anfrage erkannt: Naturheilkunde + Physiotherapie' },
-                  { type: 'ai', text: 'Sehr gute Frage! Das ist NICHT im Standard enthalten, aber wir können das hinzubucharen:\n\n🧘 Naturheilkunde: +€12/Monat → bis €100/Quartal\n🏃 Physiotherapie: +€8/Monat → 10 Sitzungen/Jahr\n\nWürde das interessieren?' },
-                  { type: 'human', text: 'Das ist mir jetzt insgesamt zu teuer, wenn ich das alles zusammenrechne.' },
-                  { type: 'ai', text: 'Absolut verständlich! Gute Nachricht: Wenn Sie JETZT abschließen, kriegen Sie unser Special-Offer: 3 Monate 50% Rabatt auf alle Zusatzversicherungen. Das spart Ihnen ca. €120. Total: €206/Monat statt €226. Attraktiv?' },
-                  { type: 'processing', text: '💰 Dynamic Pricing: Base €186 + Add-ons €20 = €206 | Rabatt -€20 | Final: €206/Monat | Revenue-Impact: +€2.472/Jahr' },
-                  { type: 'human', text: 'Okay, das ist tatsächlich sehr attraktiv! Aber können wir einen Termin mit einem Berater machen?' },
-                  { type: 'ai', text: 'Absolut verständlich! Ich buche Ihnen einen Call mit unserem Senior-Versicherungs-Berater Sophie Weber. Sie kann alles noch mal durchgehen und alle Details klären. Passt Ihnen morgen 15:00 Uhr?' },
-                  { type: 'human', text: 'Ja, perfekt!' },
-                  { type: 'ai', text: '✅ Termin ist gebucht!\n📅 Morgen 15:00 Uhr\n👤 Berater: Sophie Weber (Senior Advisor)\n📞 Zoom-Link wird per Mail gesendet\n\nUnd dieses Angebot mit €206/Monat bleibt natürlich voll valid. Sie können dann direkt mit Sophie abschließen, wenn Sie möchten.' },
-                  { type: 'processing', text: '✅ Finales Angebot: €206/Monat | Sales-Callback: MORGEN 15:00 | Lead-Qualität: RED HOT | LTV: €2.472' },
-                  { type: 'ai', text: 'Vielen Dank fürs Gespräch! Warten Sie auf die E-Mail mit Zoom-Link und unsere premium Informationsbroschüre. Falls noch Fragen - schreiben Sie mir einfach. Auf Wiedersehen!' },
-                  { type: 'info', text: '📊 ERGEBNIS: Premium-Angebot €206/Monat (~€2.472/Jahr) | Closing-Probability: 94% | Sales-Callback-Prepared | Revenue-Forecast: +€2.472' }
-                ],
+          let body = '';
+          if (msg.type === 'ai') {
+            body = `<div class="avatar">AI</div><div class="content">${msg.text} <button class="play-audio-btn" onclick="playVoice('${msg.text}', 'ai')">▶</button></div>`;
+          } else if (msg.type === 'human') {
+            body = `<div class="content">${msg.text} <button class="play-audio-btn" onclick="playVoice('${msg.text}', 'human')">▶</button></div>`;
+          } else if (msg.type === 'processing') {
+            msgDiv.className = 'processing';
+            body = msg.text;
+          } else if (msg.type === 'info') {
+            body = msg.text;
+          }
 
-                education: [
-                  { type: 'ai', text: 'Willkommen bei der Business Academy! Mein Name ist ZEYNAH, Ihr digitaler Studienberater. Welcher Kurs-Bereich interessiert Sie?' },
-                  { type: 'human', text: 'Hallo! Ich bin sehr interessiert am Digital Marketing Kurs. Aber vorher hätte ich gerne eine persönliche Beratung.' },
-                  { type: 'ai', text: 'Sehr gerne! Damit ich den PERFEKTEN Kurs empfehle - ein paar Fragen: Welche Erfahrung haben Sie bereits mit Marketing?' },
-                  { type: 'human', text: 'Ich arbeite seit 3 Jahren im Content-Marketing für eine kleine Agentur. Ich kenne Basics wie SEO und Social, aber möchte mich deutlich weiterentwickeln.' },
-                  { type: 'processing', text: '🎯 Qualifizierungs-Profil: Content-Marketing 3 Jahre | Level: INTERMEDIATE → ADVANCED empfohlen | Potenzial: HOCH' },
-                  { type: 'ai', text: 'Perfekt! 3 Jahre Content-Marketing sind eine sehr solide Basis. Dann empfehle ich NICHT unseren "Marketing Basics" Kurs, sondern den "Advanced Digital Marketing Mastery" Kurs. Das passt perfekt zu Ihrem Level!' },
-                  { type: 'ai', text: '📚 Advanced Digital Marketing Mastery\n⏱️ Dauer: 10 Wochen\n💻 Format: 100% online (asynchron, in Ihrem Tempo)\n📊 Inhalte: SEO, PPC, Marketing Automation, Analytics, Growth Hacking\n🎓 Zertifikat: Branchenweit anerkannt\n💰 Kosten: €1.299\n\nKlingt das interessant für Sie?' },
-                  { type: 'human', text: 'Klingt mega! Aber kann ich das neben meiner aktuellen Arbeit machen? Ich habe nicht viel Zeit.' },
-                  { type: 'ai', text: 'Absolut! Der Kurs ist 100% online und 100% in Ihrem Tempo. Durchschnitt: 10-15 Stunden pro Woche. Sie können jederzeit pausieren. Und: Tausende Studenten berichten: "Passt perfekt neben dem Job!"' },
-                  { type: 'human', text: 'Super! Und wann kann ich starten?' },
-                  { type: 'processing', text: '📅 Kurs-Kalender prüfen: Nächste Cohorte: 3. März 2026 | Plätze frei: 12 von 30' },
-                  { type: 'ai', text: '✅ Perfekt! Nächste Cohorte startet am 3. März 2026 (in exakt 2.5 Wochen). Sie können sich JETZT anmelden und erhalten schon vorab die Prerequisites und einen Setup-Guide. Interessiert?' },
-                  { type: 'human', text: 'Ja sehr! Wie meldet man sich an?' },
-                  { type: 'ai', text: 'Ich schicke Ihnen jetzt sofort einen persönlichen Anmeldungs-Link. Es dauert nur 2 Minuten:\n\n1️⃣ Persönliche Daten erfassen\n2️⃣ Zahlungsart wählen (Kreditkarte, PayPal, Überweisung)\n3️⃣ Fertig! Sie kriegen instantly Login-Daten + Startmaterial\n\nSoll ich den Link JETZT schicken?' },
-                  { type: 'human', text: 'Ja, sehr gerne! Ich schaue mir das heute noch an!' },
-                  { type: 'processing', text: '📧 Anmeldungs-Link generieren | Personalisieren | 💳 Payment Gateway aktivieren | Welcome-Email vorbereiten' },
-                  { type: 'ai', text: '✅ Der Link ist GERADE an Ihre E-Mail gesendet worden! Sie finden ihn auch in der SMS, die ich Ihnen eben schreibe.\n\n📧 E-Mail: Komplette Kurs-Info + Anmeldeseite\n📱 SMS: Direkter Link + Support-Nummer\n\nBei Fragen: support@academy.de oder die SMS-Nummer. Viel Erfolg!' },
-                  { type: 'info', text: '📊 ERGEBNIS: Kurs-Anmeldung gestartet | Wert: €1.299 | Start: 3. März 2026 | Lead-LTV: €1.299 + Future Courses | Conversion: 87% Wahrscheinlichkeit' }
-                ],
+          msgDiv.innerHTML = body;
+          content.appendChild(msgDiv);
+          modal.querySelector('.modal-content').scrollTop = modal.querySelector('.modal-content').scrollHeight;
 
-                restaurant: [
-                  { type: 'ai', text: 'Willkommen bei La Bella Pizzeria! Ich bin ZEYNAH, Ihr digitaler Reservierungs-Assistent. Wie kann ich Ihnen einen wundervollen Abend bereiten?' },
-                  { type: 'human', text: 'Hallo! Ich würde gerne einen Tisch für nächsten Samstag um 19:30 Uhr reservieren.' },
-                  { type: 'ai', text: 'Sehr gerne! Welch ein perfekter Zeitpunkt - Samstag um 19:30 ist bei uns sehr begehrt. Für wie viele Personen möchte ich reservieren?' },
-                  { type: 'human', text: 'Für 4 Personen bitte. Es ist unser Hochzeitstag!' },
-                  { type: 'processing', text: '🎉 Anlass erkannt: HOCHZEITSTAG | Occasion-Level: PREMIUM | Special-Service: JA' },
-                  { type: 'ai', text: 'Herzlichen Glückwunsch zum Hochzeitstag! 🎉 Das ist wunderbar und romantisch! Ich sorge für einen besonders schönen und romantischen Tisch. Welcher Tischtyp würde Ihnen gefallen?' },
-                  { type: 'human', text: 'Am liebsten ein romantischer Tisch mit Blick, vielleicht neben dem Fenster mit Kerzen?' },
-                  { type: 'ai', text: '✅ Perfekt! Ich reserviere Ihnen unseren allerbesten Fenster-Tisch im hinteren Bereich - romantisch mit Blick auf die Spree und schöner Kerzenbeleuchtung. 🕯️ Absolut romantisch!' },
-                  { type: 'processing', text: '📍 Premium-Tisch reserviert: Fenster | 4 Plätze | Premium-Location | Hochzeitstag-Setup: JA' },
-                  { type: 'ai', text: 'Wunderbar! Lassen Sie mich die Details notieren:\n\n👥 4 Personen\n📅 Samstag, 19:30 Uhr  \n🍽️ Fenster-Tisch (Premium-Location, romantisch)\n🎉 Anlass: Hochzeitstag\n💐 Special-Feature: Komplimentäre Prosecco auf unser Haus!\n\nUnter welchem Namen soll ich reservieren?' },
-                  { type: 'human', text: 'Müller, bitte. M-Ü-L-L-E-R.' },
-                  { type: 'ai', text: '✅ Perfekt eingetragen! Noch eine Frage - möchten Sie, dass wir schon einen Favorit-Wein auswählen? Oder bevorzugen Sie selbst zu wählen beim Besuch?' },
-                  { type: 'human', text: 'Wir sind nicht so Wein-Experten ehrlich gesagt. Was empfehlen Sie?' },
-                  { type: 'ai', text: 'Zu unserem Hochzeitstag-Menü würde ich einen schönen italienischen Prosecco oder einen leichten Pinot Grigio empfehlen. Beide ca. €35-45. Wenn Sie möchten, stelle ich gerne eine Flasche bereit zum Bestpreis?' },
-                  { type: 'human', text: 'Gerne! Den Prosecco bitte!' },
-                  { type: 'processing', text: '🍾 Prosecco reserviert | Premium-Kühlung: 4-6°C | Tisch-Setup: Hochzeitstag-Edition' },
-                  { type: 'ai', text: '✅ Absolut perfekt! Alles ist vorbereitet. Hier ist Ihre RESERVIERUNGS-BESTÄTIGUNG:\n\n🎫 RESERVIERUNG BESTÄTIGT\n📅 Samstag, 19:30 Uhr\n👥 4 Personen\n🍽️ Window-Tisch (Premium)\n👤 Name: Müller\n🎉 Hochzeitstag-Setup + Prosecco GRATIS\n📞 Tel: 030-9876543\n💌 Reservierungs-ID: MUELLER-HS-2308\n\nSie erhalten noch eine SMS mit Bestätigung!' },
-                  { type: 'processing', text: '📱 SMS-Bestätigung versenden | 📧 E-Mail mit Adresse | 🍝 Kitchen-Team Alert | 🎉 Event-Status: PREMIUM' },
-                  { type: 'ai', text: 'Eine kleine Frage noch: Haben Sie allerdings Nahrungsmittel-Allergien, die ich dem Chef sagen sollte?' },
-                  { type: 'human', text: 'Meine Frau ist laktoseintolerant. Das sollten Sie dem Chef sagen.' },
-                  { type: 'ai', text: '✅ Das ist wichtig! Ich gebe das dem Chef sofort Bescheid. Wir haben viele laktosefreie Optionen und können das perfekt verwalten. Der Chef wird sich speziell darum kümmern!' },
-                  { type: 'ai', text: '✅ Alles ist perfekt vorbereitet! Ich freue mich wirklich auf Ihren Besuch nächsten Samstag. Es wird ein wundervoller, romantischer Hochzeitstag-Abend! 🎉🥂 Genießen Sie Ihren besonderen Tag!' },
-                  { type: 'info', text: '📊 ERGEBNIS: Premium-Reservierung | 4 Personen | Geschätzter Umsatz: €220-280 | Hochzeitstag-Package | 100% Loyalitäts-Potenzial & Referrals' }
-                ]
-              };
+          // Render stats at the end
+          if (index === demo.script.length - 1) {
+            setTimeout(() => {
+              let statsHtml = '<div class="demo-stats">';
+              demo.stats.forEach(s => {
+                statsHtml += `<div class="stat"><div class="stat-value">${s.value}</div><div class="stat-label">${s.label}</div></div>`;
+              });
+              statsHtml += '</div>';
+              statsContainer.innerHTML = statsHtml;
+            }, 800);
+          }
+        }, index * 1000);
+      });
+    }
 
-              function openDemo(demoType) {
-                const modal = document.getElementById(demoType + '-modal');
-                const content = document.getElementById(demoType + '-content');
+    function playVoice(text, role) {
+      if (!window.speechSynthesis) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'de-DE';
 
-                modal.classList.add('active');
-                content.innerHTML = '';
+      if (speechVoices.length === 0) loadVoices();
 
-                const script = demoScripts[demoType];
+      const deVoice = speechVoices.find(v => v.lang.startsWith('de') && (role === 'ai' ? v.name.includes('Google') : true)) || speechVoices.find(v => v.lang.startsWith('de')) || speechVoices[0];
 
-                script.forEach((msg, index) => {
-                  setTimeout(() => {
-                    const messageDiv = document.createElement('div');
-                    messageDiv.className = `message ${msg.type}`;
-                    let playBtn = '';
-                    // Only add play button for ai/human/info
-                    if (msg.type === 'ai' || msg.type === 'human' || msg.type === 'info') {
-                      playBtn = `<button class="play-audio-btn" title="Abhören" onclick="playDemoAudio(this, '${msg.type.replace(/'/g, '')}', \"${msg.text.replace(/"/g, '&quot;').replace(/'/g, '\'')}\")">&#9658;</button>`;
-                    }
-                    if (msg.type === 'ai') {
-                      messageDiv.innerHTML = `<div class="avatar">AI</div><div class="content">${msg.text}</div>${playBtn}`;
-                    } else if (msg.type === 'human') {
-                      messageDiv.innerHTML = `<div class="content">${msg.text}</div>${playBtn}`;
-                    } else if (msg.type === 'processing') {
-                      messageDiv.className = 'processing';
-                      messageDiv.innerHTML = msg.text;
-                    } else if (msg.type === 'info') {
-                      messageDiv.className = 'message info';
-                      messageDiv.innerHTML = msg.text + playBtn;
-                    }
-                    content.appendChild(messageDiv);
-                    content.parentElement.scrollTop = content.parentElement.scrollHeight;
-                  }, index * 600);
-                });
-              }
+      if (deVoice) utter.voice = deVoice;
+      utter.rate = role === 'ai' ? 1.05 : 1.0;
+      utter.pitch = role === 'ai' ? 1.1 : 1.0;
 
-              // Optimized Voice Synthesis Engine for PC/Mobile
-              let speechVoices = [];
-              function loadVoices() {
-                speechVoices = window.speechSynthesis.getVoices();
-              }
-              if (window.speechSynthesis.onvoiceschanged !== undefined) {
-                window.speechSynthesis.onvoiceschanged = loadVoices;
-              }
-              loadVoices();
+      window.speechSynthesis.speak(utter);
+    }
 
-              // Speech synthesis for demo messages
-              function playDemoAudio(btn, type, text) {
-                if (!window.speechSynthesis) {
-                  alert('Sprachausgabe wird von Ihrem Browser nicht unterstützt.');
-                  return;
-                }
+    function closeDemo() {
+      window.speechSynthesis.cancel();
+      document.getElementById('demo-modal').classList.remove('active');
+    }
 
-                // Prevent overlapping speech
-                window.speechSynthesis.cancel();
+    window.onclick = function (e) {
+      if (e.target.classList.contains('modal')) closeDemo();
+    };
 
-                // Visual feedback
-                btn.disabled = true;
-                btn.innerHTML = '🔊';
-
-                const utter = new SpeechSynthesisUtterance(text);
-                utter.lang = 'de-DE';
-                utter.volume = 1.0;
-
-                // Voice selection logic
-                if (speechVoices.length === 0) loadVoices();
-
-                if (type === 'ai') {
-                  // AI: Slightly higher pitch/rate for clarity
-                  const aiVoice = speechVoices.find(v => v.name.toLowerCase().includes('google deutsch') || v.name.toLowerCase().includes('zira')) ||
-                    speechVoices.find(v => v.lang.startsWith('de')) || speechVoices[0];
-                  if (aiVoice) utter.voice = aiVoice;
-                  utter.rate = 1.05;
-                  utter.pitch = 1.1;
-                } else {
-                  // Human: Natural flow
-                  const humanVoice = speechVoices.find(v => v.lang.startsWith('de') && v.localService) ||
-                    speechVoices.find(v => v.lang.startsWith('de')) || speechVoices[0];
-                  if (humanVoice) utter.voice = humanVoice;
-                  utter.rate = 1.0;
-                  utter.pitch = 1.0;
-                }
-
-                utter.onend = () => {
-                  btn.disabled = false;
-                  btn.innerHTML = '&#9658;';
-                };
-                utter.onerror = () => {
-                  btn.disabled = false;
-                  btn.innerHTML = '&#9658;';
-                };
-                window.speechSynthesis.speak(utter);
-              }
-
-              function closeDemo() {
-                const modals = document.querySelectorAll('.modal.active');
-                modals.forEach(m => m.classList.remove('active'));
-              }
-
-              // Close modal when clicking outside
-              window.onclick = function (event) {
-                if (event.target.classList.contains('modal')) {
-                  event.target.classList.remove('active');
-                }
-              }
-            </script>
-
+    // Deep Linking Engine
+    window.addEventListener('load', () => {
+      const params = new URLSearchParams(window.location.search);
+      const demoId = params.get('demo');
+      if (demoId && demoScripts[demoId]) {
+        setTimeout(() => openDemo(demoId), 800);
+      }
+    });
+  </script>
 </body>
 
 </html>

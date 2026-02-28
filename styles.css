@@ -251,6 +251,8 @@ nav a:hover::after {
 .cta {
   display: inline-block;
   padding: 18px 40px;
+  min-height: 44px;
+  min-width: 44px;
   background: linear-gradient(135deg, var(--cyan), var(--gold));
   color: var(--dark);
   text-decoration: none;
@@ -262,6 +264,8 @@ nav a:hover::after {
   font-size: 16px;
   position: relative;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .cta::before {

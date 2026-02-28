@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
     <meta name="description"
         content="ZEYNAH - Intelligente Voice AI Systeme für automatisierte Kundenkommunikation und Lead-Generierung. Skalieren Sie Ihren Umsatz mit KI-Agenten.">
     <meta name="keywords" content="Voice AI, KI-Agenten, Lead Generierung, Vertriebsautomation, Umsatz-Automatisierung">
@@ -39,10 +39,12 @@
 
     <header class="main-header">
         <div class="container header-content">
-            <a href="index.html" class="logo"><img src="zeynahlogo.jpg.jpeg" alt="ZEYNAH"></a>
+            <a href="index.html" class="logo"><img src="zeynahlogo.jpg.jpeg" alt="ZEYNAH"
+                    onerror="this.src='https://raw.githubusercontent.com/NazanNilDalkic/cloud/main/zeynahlogo.jpg.jpeg'"></a>
             <nav>
                 <a href="#about" data-trans="about">Über uns</a>
                 <a href="#services" data-trans="services">Services</a>
+                <a href="#imperium" data-trans="imperium_nav">Imperium</a>
                 <a href="demos.html" data-trans="demos_nav">Demo</a>
                 <a href="#contact" data-trans="contact">Kontakt</a>
             </nav>
@@ -67,7 +69,14 @@
                     Unsere KI-Agenten führen natürliche Gespräche, qualifizieren Leads
                     und integrieren sich nahtlos in bestehende Systeme.
                 </p>
-                <a href="#contact" class="cta" data-trans="cta_strategy">Strategie-Session buchen</a>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 30px;">
+                    <a href="https://wa.me/491776480485" class="cta"
+                        style="background: var(--cyan); color: #000; box-shadow: 0 0 40px rgba(0, 212, 255, 0.4); padding: 20px 40px; font-size: 18px; font-weight: 800; display: inline-flex; align-items: center; gap: 12px;"
+                        data-trans="cta_strategy"><i class="fab fa-whatsapp" style="font-size: 24px;"></i> STRATEGIE-SESSION JETZT BUCHEN</a>
+                    <a href="../ZEYNAH-IMPERIUM.html" class="cta"
+                        style="background: rgba(255, 255, 255, 0.05); border: 2px solid var(--cyan); color: var(--cyan); padding: 20px 40px; font-size: 18px;"
+                        data-trans="imperium_cta">Imperium Dashboard</a>
+                </div>
             </div>
             <div class="hero-visual">
                 <video autoplay muted loop playsinline
@@ -164,9 +173,19 @@
                         style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,212,255,0.1);">
                         <p style="font-size: 12px; margin-bottom: 8px; color: var(--cyan); font-weight: 600;"
                             data-trans="listen_demo">Demo anhören</p>
-                        <button class="cta" style="padding: 10px 20px; font-size: 14px;"
-                            onclick="speakDemo('voice_greet_b2b')">🔊
-                            Abspielen</button>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button class="cta" style="padding: 10px 20px; font-size: 14px;"
+                                onclick="speakDemo('voice_greet_b2b')">🔊 Voice Sample</button>
+                            <a href="demos.html?demo=b2b" class="cta"
+                                style="padding: 10px 20px; font-size: 14px; background: rgba(0, 212, 255, 0.1); color: var(--cyan); border: 1px solid var(--cyan);">Interaktive
+                                Demo</a>
+                        </div>
+                        <div
+                            style="display: flex; gap: 15px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px;">
+                            <a href="../Zeynah-B2B/index.html"
+                                style="font-size: 14px; color: #6366f1; font-weight: 800; text-decoration: none; border: 1px solid #6366f1; padding: 10px 20px; border-radius: 8px;">🚀
+                                B2B Sales Hub öffnen &rarr;</a>
+                        </div>
                     </div>
                 </div>
 
@@ -182,9 +201,19 @@
                         style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,212,255,0.1);">
                         <p style="font-size: 12px; margin-bottom: 8px; color: var(--cyan); font-weight: 600;"
                             data-trans="listen_demo">Demo anhören</p>
-                        <button class="cta" style="padding: 10px 20px; font-size: 14px;"
-                            onclick="speakDemo('voice_greet_healthcare')">🔊
-                            Abspielen</button>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button class="cta" style="padding: 10px 20px; font-size: 14px;"
+                                onclick="speakDemo('voice_greet_healthcare')">🔊 Voice Sample</button>
+                            <a href="demos.html?demo=healthcare" class="cta"
+                                style="padding: 10px 20px; font-size: 14px; background: rgba(0, 212, 255, 0.1); color: var(--cyan); border: 1px solid var(--cyan);">Interaktive
+                                Demo</a>
+                        </div>
+                        <div
+                            style="display: flex; gap: 15px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px;">
+                            <a href="../Zeynah-Healthcare/index.html"
+                                style="font-size: 14px; color: #0ea5e9; font-weight: 800; text-decoration: none; border: 1px solid #0ea5e9; padding: 10px 20px; border-radius: 8px;">🚀
+                                Health Hub öffnen &rarr;</a>
+                        </div>
                     </div>
                 </div>
 
@@ -200,14 +229,24 @@
                         style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,212,255,0.1);">
                         <p style="font-size: 12px; margin-bottom: 8px; color: var(--cyan); font-weight: 600;"
                             data-trans="listen_demo">Demo anhören</p>
-                        <button class="cta" style="padding: 10px 20px; font-size: 14px;"
-                            onclick="speakDemo('voice_greet_realestate')">🔊
-                            Abspielen</button>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button class="cta" style="padding: 10px 20px; font-size: 14px;"
+                                onclick="speakDemo('voice_greet_realestate')">🔊 Voice Sample</button>
+                            <a href="demos.html?demo=realestate" class="cta"
+                                style="padding: 10px 20px; font-size: 14px; background: rgba(0, 212, 255, 0.1); color: var(--cyan); border: 1px solid var(--cyan);">Interaktive
+                                Demo</a>
+                        </div>
+                        <div
+                            style="display: flex; gap: 15px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px;">
+                            <a href="../Zeynah-RealEstate/index.html"
+                                style="font-size: 14px; color: #10b981; font-weight: 800; text-decoration: none; border: 1px solid #10b981; padding: 10px 20px; border-radius: 8px;">🚀
+                                Realty Hub öffnen &rarr;</a>
+                        </div>
                     </div>
                 </div>
 
                 <div class="card usecase-card">
-                    <h3 data-trans="usecase_6_title">🍕 Gastronomie & Hotellerie</h3>
+                    <h3 data-trans="usecase_6_title">🍕 Restaurant & Hotellerie</h3>
                     <ul class="usecase-list">
                         <li data-trans="usecase_6_1">Tischreservierungen automatisiert</li>
                         <li data-trans="usecase_6_2">Event-Buchungen & Catering-Anfragen</li>
@@ -218,19 +257,57 @@
                         style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,212,255,0.1); margin-bottom: 15px;">
                         <p style="font-size: 12px; margin-bottom: 8px; color: var(--cyan); font-weight: 600;"
                             data-trans="listen_demo">Demo anhören</p>
-                        <button class="cta" style="padding: 10px 20px; font-size: 14px;"
-                            onclick="speakDemo('voice_greet_restaurant')">🔊
-                            Abspielen</button>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button class="cta" style="padding: 10px 20px; font-size: 14px;"
+                                onclick="speakDemo('voice_greet_restaurant')">🔊 Voice Sample</button>
+                            <a href="demos.html?demo=restaurant" class="cta"
+                                style="padding: 10px 20px; font-size: 14px; background: rgba(0, 212, 255, 0.1); color: var(--cyan); border: 1px solid var(--cyan);">Interaktive
+                                Demo</a>
+                        </div>
+                        <div
+                            style="display: flex; gap: 15px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; flex-wrap: wrap;">
+                            <a href="../Zeynah-Gastro/index.html"
+                                style="font-size: 14px; color: #ff4d4d; font-weight: 800; text-decoration: none; border: 1px solid #ff4d4d; padding: 10px 20px; border-radius: 8px;">🚀
+                                Restaurant App v2 &rarr;</a>
+                            <a href="../Zeynah-Hotel/index.html"
+                                style="font-size: 14px; color: #f59e0b; font-weight: 800; text-decoration: none; border: 1px solid #f59e0b; padding: 10px 20px; border-radius: 8px;">🏨
+                                Hotel Hub &rarr;</a>
+                        </div>
                     </div>
-                    <a href="https://zeynah-app.netlify.app" target="_blank" class="demo-link" style="margin-top: 0;"
-                        data-trans="live_app_test">Live App testen →</a>
                 </div>
-
+                <div class="card usecase-card">
+                    <h3 data-trans="usecase_7_title">🛡️ Versicherungen & Finanzen</h3>
+                    <ul class="usecase-list">
+                        <li data-trans="usecase_7_1">Lead-Qualifizierung für Vorsorgeprodukte</li>
+                        <li data-trans="usecase_7_2">KI-Analyse von Rentenlücken</li>
+                        <li data-trans="usecase_7_3">Automatisierte Erstberatungstermine</li>
+                        <li data-trans="usecase_7_4">Höhere Abschlussquoten</li>
+                    </ul>
+                    <div class="audio-demo-box"
+                        style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(0,212,255,0.1); margin-bottom: 15px;">
+                        <p style="font-size: 12px; margin-bottom: 8px; color: var(--cyan); font-weight: 600;"
+                            data-trans="listen_demo">Demo anhören</p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button class="cta" style="padding: 10px 20px; font-size: 14px;"
+                                onclick="speakDemo('voice_greet_insurance')">🔊 Voice Sample</button>
+                            <a href="demos.html?demo=insurance" class="cta"
+                                style="padding: 10px 20px; font-size: 14px; background: rgba(0, 212, 255, 0.1); color: var(--cyan); border: 1px solid var(--cyan);">Interaktive
+                                Demo</a>
+                        </div>
+                        <div
+                            style="display: flex; gap: 15px; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px;">
+                            <a href="../Zeynah-Insurance/index.html"
+                                style="font-size: 14px; color: #d4af37; font-weight: 800; text-decoration: none; border: 1px solid #d4af37; padding: 10px 20px; border-radius: 8px;">🚀
+                                Insurance Hub öffnen &rarr;</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="cta-section">
                 <p data-trans="usecases_cta" style="text-align: center; color: var(--muted); font-size: 16px;">
-                    Nicht sicher, ob ZEYNAH für Ihre Branche passt? <strong style="color: var(--cyan);">Kontaktieren Sie
+                    Nicht sicher, ob ZEYNAH für Ihre Branche passt? <strong style="color: var(--cyan);">Kontaktieren
+                        Sie
                         uns.</strong> Wir finden die richtige Lösung für Ihr Unternehmen.
                 </p>
             </div>
@@ -320,7 +397,36 @@
         </div>
     </section>
 
-    <footer class="compact-footer"
+    <!-- Imperium Section -->
+    <section id="imperium" class="imperium-access-section"
+        style="padding: 100px 0; background: var(--dark-bg); position: relative; overflow: hidden; border-top: 1px solid rgba(0,212,255,0.1);">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title" data-trans="imperium_title" style="margin-bottom: 20px;">ZEYNAH Management Suite
+            </h2>
+            <p data-trans="imperium_desc"
+                style="max-width: 700px; margin: 0 auto 40px; color: var(--muted); font-size: 18px;">
+                Greifen Sie auf Ihr erweitertes Kontrollzentrum zu. Verwalten Sie alle Cluster und KI-Agenten von einer
+                zentralen Oberfläche aus.
+            </p>
+            <div class="imperium-preview"
+                style="position: relative; margin-bottom: 50px; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.5); border: 1px solid rgba(0,212,255,0.2);">
+                <img src="zeynahlogo.jpg.jpeg" alt="ZEYNAH"
+                    style="width: 200px; margin: 0 auto; display: block; opacity: 0.5;">
+                <div
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle, transparent, var(--dark-bg)); display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="../ZEYNAH-IMPERIUM.html" class="cta"
+                        style="padding: 20px 40px; font-size: 18px; box-shadow: 0 0 30px var(--cyan);"
+                        data-trans="imperium_cta">Imperium Dashboard öffnen</a>
+                    <a href="https://wa.me/491776480485" class="cta"
+                        style="padding: 20px 40px; font-size: 18px; background: #25D366; color: #fff; border: none; box-shadow: 0 0 30px rgba(37,211,102,0.5); display: inline-flex; align-items: center; gap: 12px;"
+                        data-trans="cta_strategy"><i class="fab fa-whatsapp" style="font-size: 24px;"></i> Buchen Sie Zeynah</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Footer Section -->
+    <footer class="main-footer"
         style="padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 20px;">
         <div class="container">
             <div class="footer-row"
@@ -690,6 +796,8 @@
             waBtn.addEventListener('mouseleave', () => waBtn.style.transform = 'scale(1)');
         }
     </script>
+    <elevenlabs-convai agent-id="agent_3201khxdc18wfrabzjjpqtes42jz"></elevenlabs-convai>
+    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 </body>
 
 </html>

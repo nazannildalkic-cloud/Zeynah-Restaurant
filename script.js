@@ -1,3 +1,8 @@
+// ========== SERVICE WORKER (Offline) ==========
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  navigator.serviceWorker.register('sw.js', { scope: './' }).catch(() => {});
+}
+
 // ========== MOBILE MENU TOGGLE ==========
 const menuToggle = document.querySelector('.mobile-menu-toggle');
 const nav = document.querySelector('nav');
